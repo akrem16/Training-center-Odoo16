@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_enseignant,access.hr.enseignant,model_hr_enseignant,,1,1,1,1
+access_hr_enseignant,access.hr.enseignant,model_hr_enseignant,,1,1,1,1
+access_hr_etudiant,access.hr.etudiant,model_hr_etudiant,,1,1,1,1

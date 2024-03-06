@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+    <!-- Action to open the course views -->
+        <record id="action_course" model="ir.actions.act_window">
+            <field name="name">Cours</field>
+            <field name="res_model">academy.course</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first course here
+                </p>
+            </field>
+        </record>
+
+    <!-- Tree View for the courses -->
+    <record id="view_course_tree" model="ir.ui.view">
+        <field name="name">academy.course.tree</field>
+        <field name="model">academy.course</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="category"/>
+                <field name="course_format"/>
+                <field name="duration"/>
+                <field name="language"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View for the courses -->
+    <record id="view_course_form" model="ir.ui.view">
+        <field name="name">academy.course.form</field>
+        <field name="model">academy.course</field>
+        <field name="arch" type="xml">
+            <form string="Cours">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="category"/>
+                        <field name="course_format"/>
+                        <field name="duration"/>
+                        <field name="language"/>
+                    </group>
+                    <group string="Additional Information">
+                        <field name="learning_objectives"/>
+                        <field name="materials_resources" widget='html'/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Kanban View for the courses -->
+    <record id="view_course_kanban" model="ir.ui.view">
+        <field name="name">academy.course.kanban</field>
+        <field name="model">academy.course</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <strong><field name="name"/></strong>
+                                <div>Category: <field name="category"/></div>
+                                <div>Format: <field name="course_format"/></div>
+                                <div>Duration: <field name="duration"/> hours</div>
+                                <div>Language: <field name="language"/></div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+            <menuitem id="menu_hr_etudiant_departements" name="Cours"
+                  parent="menu_hr_etudiant" sequence="20"
+                  action="action_course"/>
+        </data>
+</odoo>
+
