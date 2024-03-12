@@ -8,8 +8,7 @@
             <field name="arch" type="xml">
                 <form string="Enseignant">
                     <header>
-                        <!-- Bouton pour ouvrir les demandes de congé -->
-                        <button name="action_open_time_off" string="Time Off" type="object" class="btn-primary"/>
+                        <button name="action_open_time_off" string="Congé" type="object" class="btn-primary"/>
                     </header>
                     <sheet>
                         <div class="oe_title">
@@ -18,28 +17,38 @@
                         <group>
                             <group>
                                 <field name="name" placeholder="Nom enseignant"/>
+                                <field name="job_title" string="Titre de poste"/>
                             </group>
                             <group>
-                                <field name="image" widget='image' class="oe_avatar"
-                                       options='{"zoom": true, "preview_image":"avatar_128"}' nolabel="0"/>
+                                <div class="o_employee_avatar" style="margin-left: 400px">
+                                    <field name="image_1920" widget='image' class="oe_avatar m-0"
+                                           options='{"zoom": true, "preview_image":"avatar_128"}'/>
+
+                                </div>
                             </group>
                             <group>
                                 <field name="mobile_pro" widget="phone"/>
                                 <field name="email_pro" widget="email"/>
                             </group>
+                            <group>
+                                <field name="job_id" attrs="{'readonly': [('job_title','=','Enseignant')]}"/>
+                            </group>
                         </group>
-
                         <notebook>
                             <page name="informations_personnelles" string="Informations Personnelles"
                                   groups="hr.group_hr_user">
                                 <group>
                                     <group string="Contact Privé">
-                                        <field name="address"/>
                                         <field name="email_pers" string="Email"/>
                                         <field name="mobile_pers" string="Téléphone"/>
-                                        <field name="bank_account"/>
+                                        <separator name="citoyenneté" string="Citoyenneté"/>
                                         <field name="lang" string="Langue"/>
-                                        <field name="km_home_work" string="Distance Domicile-Travail"/>
+                                        <field name="genre" string="Genre"/>
+                                        <field name="date_naiss"/>
+                                        <separator name="education" string="Éducation"/>
+                                        <field name="certificat"/>
+                                        <field name="study_field"/>
+                                        <field name="study_school"/>
                                     </group>
                                     <group string="Statut Familial">
                                         <field name="matrimonial"/>
@@ -48,24 +57,29 @@
                                         <field name="emergency_contact"/>
                                         <field name="emergency_phone" class="o_force_ltr"/>
                                     </group>
-                                    <group string="Éducation">
-                                        <field name="certificat"/>
-                                        <field name="study_field"/>
-                                        <field name="study_school"/>
-                                    </group>
-                                    <group string="Citoyenneté">
-                                        <field name="country_id"/>
-                                        <field name="identification_id"/>
-                                        <field name="passport_id"/>
-                                        <field name="genre"/>
-                                        <field name="date_naiss"/>
-                                        <field name="place_of_birth"/>
-                                        <field name="country_of_birth"/>
+                                </group>
+                            </page>
+
+
+                            <page name="informations_professionnelle" string="Informations Professionnelle"
+                                  groups="hr.group_hr_user">
+                                <group>
+                                    <group string="Contact Privé">
+                                        <field name="company_id" string="Societe"/>
+                                        <field name="department_id" string="Department"/>
+                                        <separator name="horaire" string="Horaire"/>
+                                        <field name="resource_calendar_id" string="Horaire"/>>
                                     </group>
                                 </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <!-- Chatter -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="message_ids"/>
+                    </div>
+
                 </form>
             </field>
         </record>
@@ -76,39 +90,80 @@
             <field name="model">hr.enseignant</field>
             <field name="arch" type="xml">
                 <tree string="Liste des Enseignants">
-                    <field name="name" width="200"/>
+                    <field name="name" width="200" string="Nom enseignat"/>
                     <field name="mobile_pro" width="200"/>
                     <field name="email_pro" width="200"/>
-                    <field name="contract_type" width="200"/>
+                    <!--                    <field name="contract_type" width="200"/>-->
                 </tree>
             </field>
         </record>
 
         <!-- Define the Kanban View for hr.enseignant -->
-        <record id="view_hr_enseignant_kanban" model="ir.ui.view">
+        <record id="hr_kanban_view_enseignants" model="ir.ui.view">
             <field name="name">hr.enseignant.kanban</field>
             <field name="model">hr.enseignant</field>
+            <field name="priority">10</field>
             <field name="arch" type="xml">
-                <kanban>
-                    <!-- Define the Kanban card structure -->
+                <kanban class="o_hr_enseignant_kanban" js_class="hr_enseignant_kanban" sample="1">
+                    <field name="id"/>
+                    <field name="image_128"/>
+                    <field name="email_pro"/>
+                    <field name="mobile_pro"/>
+                    <field name="genre"/>
                     <templates>
                         <t t-name="kanban-box">
-                            <div class="oe_kanban_global_click">
-                                <!-- Customize the appearance of the Kanban card as needed -->
-                                <div class="oe_kanban_image">
-                                    <field name="image" class="o_kanban_image_fill_left d-block enseignant_image" preview_image="image_128" widget="image" options="{'zoom': true, 'zoom_delay': 1000}" modifiers="{&quot;readonly&quot;: true}"/>
-                                </div>
+                            <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_hr_enseignant_kanban_record">
+                                <field name="image_1024" class="o_kanban_image_fill_left d-block"
+                                       preview_image="image_128"
+                                       widget="background_image" options="{'zoom': true, 'zoom_delay': 1000}"/>
+
                                 <div class="oe_kanban_details">
-                                    <!-- Display fields on the Kanban card -->
-                                    <field name="name"/>
-                                    <br />
-                                    <field name="email_pro"/>
+                                    <div class="o_kanban_record_top">
+                                        <div class="o_kanban_record_headings">
+                                            <strong class="o_kanban_record_title">
+                                                <field name="name" placeholder="Nom de l'enseignant"/>
+                                            </strong>
+                                            <div class="o_kanban_record_subtitle">
+                                                <field name="email_pro"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-muted">Mobile Pro:</span>
+                                        <field name="mobile_pro"/>
+                                    </div>
+                                    <div>
+                                        <field name="genre" widget="selection"/>
+                                    </div>
+                                    <div class="o_hr_enseignant_kanban_bottom">
+                                        <field name="category_ids" widget="many2many_tags"
+                                               options="{'color_field': 'color'}"/>
+                                    </div>
 
                                 </div>
                             </div>
                         </t>
                     </templates>
                 </kanban>
+            </field>
+        </record>
+
+
+        <record id="view_hr_enseigant_search" model="ir.ui.view">
+            <field name="name">hr.enseignant.search</field>
+            <field name="model">hr.enseignant</field>
+            <field name="arch" type="xml">
+                <search string="Search Znseiganat">
+                    <!-- Here we add a filter by courses -->
+                    <field name="course_ids" string="Cours" filter_domain="[('course_ids','ilike',self)]"/>
+                    <field name="name" string="Nom" filter_domain="[('name','ilike',self)]"/>
+                    <field name="department_id" string="department" filter_domain="[('department_id','ilike',self)]"/>
+
+                    <searchpanel>
+                        <field name="department_id"/>
+                    </searchpanel>
+
+                </search>
             </field>
         </record>
 
@@ -121,13 +176,8 @@
             <field name="view_mode">tree,kanban,form</field>
         </record>
 
-        <!-- Define the Menu Items -->
-        <menuitem id="menu_hr_enseignant" name="Enseignant" sequence="10"/>
 
-        <menuitem id="menu_hr_enseignant_list" name="Liste des Enseignants"
-                  parent="menu_hr_enseignant" sequence="10" action="action_enseignant_tree"/>
 
-        <menuitem id="menu_hr_enseignant_departements" name="Départements"
-                  parent="menu_hr_enseignant" sequence="20" action="action_enseignant_tree" />
+
     </data>
 </odoo>

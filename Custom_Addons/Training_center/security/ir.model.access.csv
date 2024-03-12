@@ -1,4 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_hr_enseignant,access.hr.enseignant,model_hr_enseignant,,1,1,1,1
-access_hr_enseignant,access.hr.enseignant,model_hr_enseignant,,1,1,1,1
 access_hr_etudiant,access.hr.etudiant,model_hr_etudiant,,1,1,1,1
+access_academy_course,access.academy.course,model_academy_course,,1,1,1,1
+access_training_center,access.training.center,model_training_center,,1,1,1,1
+access_hr_personnel,access.hr.personnel,model_hr_personnel,,1,1,1,1

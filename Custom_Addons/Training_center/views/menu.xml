@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Define the Menu Items -->
+        <!--        <menuitem id="menu_hr_enseignant" name="Enseignant" sequence="10"/>-->
+
+        <!--        <menuitem id="menu_hr_enseignant_list" name="Liste des Enseignants"-->
+        <!--                  parent="menu_hr_enseignant" sequence="10" action="action_enseignant_tree"/>-->
+
+        <!--        <menuitem id="menu_hr_enseignant_departements" name="Départements"-->
+        <!--                  parent="menu_hr_enseignant" sequence="20" action="hr.hr_department_kanban_action"/>-->
+
+
+        <!-- Define the Menu Items -->
+        <!--        <menuitem id="menu_hr_etudiant" name="Etudiant" sequence="10"/>-->
+
+        <!--        <menuitem id="menu_hr_etudiant_list" name="Liste des Etudiants"-->
+        <!--                  parent="menu_hr_etudiant" sequence="10"-->
+        <!--                  action="action_etudiant_tree"/>-->
+
+        <!--        <menuitem id="menu_hr_etudiant_departements" name="Cours"-->
+        <!--                  parent="menu_hr_etudiant" sequence="20"-->
+        <!--                  action="Training_center.action_course"/>-->
+
+
+        <!-- Define the Menu Items -->
+        <menuitem id="menu_hr_training_center" name="Training center" sequence="10"/>
+
+        <menuitem id="menu_hr_personnel" name="Employés"
+                  parent="menu_hr_training_center" sequence="5"
+                  action="hr.open_view_employee_list_my"/>
+
+                 <menuitem id="menu_hr_enseignant_departements" name="Départements"
+                          parent="menu_hr_personnel" sequence="20" action="hr.hr_department_kanban_action"/>
+
+
+        <menuitem id="menu_hr_enseignant" name="Enseignant"
+                  parent="menu_hr_training_center" sequence="10"
+                  action="action_enseignant_tree"/>
+
+        <menuitem id="menu_hr_enseignant_list" name="enseignant"
+                  parent="menu_hr_enseignant" sequence="10"
+                  action="action_enseignant_tree"/>
+
+        <menuitem id="menu_hr_conge_list" name="Congé"
+                  parent="menu_hr_enseignant" sequence="10"
+                  action="hr_holidays.hr_leave_action_new_request"/>
+
+
+        <menuitem id="menu_hr_training_center_list" name="Etudiant"
+                  parent="menu_hr_training_center" sequence="10"
+                  action="action_etudiant_tree"/>
+
+        <!--        <menuitem id="menu_hr_training_center_list" name="Etudiants"-->
+        <!--                  parent="menu_hr_training_center" sequence="10"-->
+        <!--                  action="action_etudiant_tree"/>-->
+
+        <menuitem id="menu_hr_etudiant_departements" name="Cours"
+                  parent="menu_hr_training_center" sequence="20"
+                  action="Training_center.action_course"/>
+
+
+    </data>
+</odoo>

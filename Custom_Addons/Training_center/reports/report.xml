@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="school_student_profile_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <!--                <t t-call="qweb_pdf_report_example.school_student_profile_report_template"/>-->
+                <div class="page" style="padding:30px; border:1px solid black; max-width:700px; margin:auto;">
+                    <div style="text-align:center; margin-bottom:20px;">
+                        <h3>Carte d'Étudiant</h3>
+                    </div>
+                    <div style="text-align:center;">
+                        <img t-if="doc.image" t-att-src="'data:image/png;base64,%s' % doc.image.decode()"
+                             style="max-height:200px;"/>
+                    </div>
+                    <div style="margin-top:20px;">
+                        <table style="width:100%;">
+                            <tr>
+                                <td>
+                                    <strong>Nom :</strong>
+                                </td>
+                                <td>
+                                    <span t-field="doc.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Prénom :</strong>
+                                </td>
+                                <td>
+                                    <span t-field="doc.prenom_etudiant"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Matricule :</strong>
+                                </td>
+                                <td>
+                                    <span t-field="doc.matricule"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Email :</strong>
+                                </td>
+                                <td>
+                                    <span t-field="doc.email"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Téléphone :</strong>
+                                </td>
+                                <td>
+                                    <span t-field="doc.telephone"/>
+                                </td>
+                            </tr>
+                            <!-- Ajoutez plus de champs si nécessaire -->
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <record id="school_student_profile_report_temp" model="ir.actions.report">
+        <field name="name">Imprimer la carte</field>
+        <field name="model">hr.etudiant</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">Training_center.school_student_profile_report_template</field>
+        <field name="report_file">Training_center.school_student_profile_report_template</field>
+        <field name="print_report_name">'Student-Card'</field>
+        <field name="binding_model_id" ref="model_hr_etudiant"/>
+        <field name="binding_type">report</field>
+    </record>
+
+
+        <template id="school_teacher_profile_report_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page" style="padding:30px; border:1px solid black; max-width:700px; margin:auto;">
+                        <div style="text-align:center; margin-bottom:20px;">
+                            <h3>Badge d'Enseignant</h3>
+                        </div>
+                        <div style="text-align:center;">
+                            <img t-if="doc.image_1920" t-att-src="'data:image_1920/png;base64,%s' % doc.image_1920.decode()"
+                                 style="max-height:200px;"/>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <table style="width:100%;">
+                                <tr>
+                                    <td>
+                                        <strong>Nom :</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.name"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Téléphone portable professionnel :</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.mobile_pro"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Adresse email professionnelle :</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.email_pro"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Date de Naissance :</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.date_naiss"/>
+                                    </td>
+                                </tr>
+                                                                <tr>
+                                    <td>
+                                        <strong>Post :</strong>
+                                    </td>
+                                    <td>
+                                        <strong><span t-field="doc.job_title"/></strong>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <record id="school_teacher_profile_report_temp" model="ir.actions.report">
+            <field name="name">Imprimer le badge</field>
+            <field name="model">hr.enseignant</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">Training_center.school_teacher_profile_report_template</field>
+            <field name="report_file">Training_center.school_teacher_profile_report_template</field>
+            <field name="print_report_name">'Teacher-Badge'</field>
+            <field name="binding_model_id" ref="model_hr_enseignant"/>
+            <field name="binding_type">report</field>
+        </record>
+    </odoo>
+

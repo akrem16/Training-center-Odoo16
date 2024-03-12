@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-<record id="view_users_form_inherit_enseignant" model="ir.ui.view">
-    <field name="name">res.users.form.inherit.enseignant</field>
-    <field name="model">res.users</field>
-    <field name="inherit_id" ref="base.view_users_form"/>
-    <field name="arch" type="xml">
-        <xpath expr="//sheet" position="inside">
-            <group>
-                <field name="enseignant_id"/>
-            </group>
-        </xpath>
-    </field>
-</record>
+    <data>
+<!--        <record id="view_users_form_inherit_enseignant" model="ir.ui.view">-->
+<!--            <field name="name">res.users.form.inherit.enseignant</field>-->
+<!--            <field name="model">res.users</field>-->
+<!--            <field name="inherit_id" ref="base.view_users_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//sheet" position="inside">-->
+<!--                    <group>-->
+<!--                        <field name="enseignant_id"/>-->
+<!--                    </group>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
 
+<!--        <record id="action_open_user_form" model="ir.actions.act_window">-->
+<!--            <field name="name">Créer Utilisateur</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="res_model">res.users</field>-->
+<!--            <field name="views">[(ref('base.view_users_simple_form'), 'form')]</field>-->
+<!--            <field name="target">new</field>-->
+<!--            <field name="context">{'form_view_initial_mode': 'edit', 'default_is_employee': True}</field>-->
+<!--        </record>-->
+    </data>
 </odoo>

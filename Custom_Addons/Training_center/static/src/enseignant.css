@@ -2,6 +2,20 @@
     max-width: 100px;
     max-height: 100px;
 }
+.card_kanban{
+    width: 250px;
+    height: 50px;
+}
 
-
+.oe_title h1 {
+    color: #875A7B; /* La couleur que vous voulez pour le titre */
+    font-size: 24px; /* ou la taille que vous voulez */
+}
+header button{
+    display : flex:
+    justify-content: flex-end !important;
+}
+.o_form_view .oe_avatar .img
+    margin-left: 150px;
+}
 

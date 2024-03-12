@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+                <!-- Define the Action for the Tree View -->
+<!--        <record id="action_taining_center" model="ir.actions.act_window">-->
+<!--            <field name="name">Centre de formation</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="res_model">training.center</field>-->
+<!--            <field name="view_mode">tree,kanban,form</field>-->
+<!--        </record>-->
+
+        <!-- Define the Tree View-->
+<!--        <record id="view_hr_tree" model="ir.ui.view">-->
+<!--            <field name="name">training.center.tree</field>-->
+<!--            <field name="model">training.center</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree string="Liste des Employes">-->
+
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+=    </data>
+</odoo>
