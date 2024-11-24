@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--    <record id="time_off_view_form" model="ir.ui.view">-->
+<!--        <field name="name">time.off.view.form</field>-->
+<!--        <field name="model">hr.leave.allocation</field>-->
+<!--        <field name="inherit_id" ref="hr_holidays.hr_leave_allocation_view_form"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//button[@name='action_holiday_allocation']" position="replace">-->
+<!--            </xpath>-->
+
+<!--        </field>-->
+<!--    </record>-->
+</odoo>
+

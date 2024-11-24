@@ -2,23 +2,17 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Emploi du temps',
+    'name': 'Comptabilite',
     'version': '1.1',
     'author': 'Maamri Akram , Laroussi Med Aziz',
-    'category': 'Feuilles de temps',
+    'category': 'Gestion comptable',
     'sequence': -101,
     'summary': '',
     'website': '',
     'depends': ['base', 'Training_center'],
     'data': [
         'security/ir.model.access.csv',
-        'views/ClassRoom.xml',
-        'views/Equipment.xml',
-        'views/TeacherAvailability.xml',
-        'views/menu.xml',
-        'views/Emploi_du_temps.xml',
-        'views/dashboard.xml'
-
+        'views/compte_comptable_views.xml',
     ],
     'qweb': [
     ],
@@ -26,10 +20,6 @@
     'installable': True,
     'application': True,
     'auto_install': False,
-    'assets': {
-        'web.assets_backend': [
-            'Emploi_du_temps/static/src/js/dashboard.js',
-        ],
-    },
+    'assets': {},
 
 }

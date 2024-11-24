@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="portal_my_teacher" inherit_id="portal.portal_my_home">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="url">/my/teachers</t>
+                <t t-set="title">My Teachers</t>
+            </t>
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="url">/teacher/time_off</t>
+                <t t-set="title">Time Off Requests</t>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="teacher_time_off_dashboard">
+        <t t-call="portal.portal_layout">
+            <t t-set="page_name" t-value="'teacher_time_off'"/>
+            <div class="o_portal_docs">
+                <h1>Time Off Requests</h1>
+                <!-- Placeholder for Time Off Requests Dashboard -->
+                <div id="time_off_requests_dashboard">
+                    <p class="text-center">Here, you can view and manage your time off requests.</p>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="portal_breadcrumbs_teachers" inherit_id="portal.portal_breadcrumbs">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'teachers_list_view'" class="breadcrumb-item">Teachers</li>
+            <li t-if="page_name == 'teacher_profile'" class="breadcrumb-item">
+                <a href="/my/teachers">Teachers</a> / <span t-out="teacher.name" />
+            </li>
+            <li t-if="page_name == 'teacher_time_off'" class="breadcrumb-item">Time Off Requests</li>
+        </xpath>
+    </template>
+
+    <template id="teachers_list_view_portal">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <div class="o_portal_docs">
+                <h1>Teachers</h1>
+                <!-- Placeholder for Teachers List View -->
+                <div id="teachers_list">
+                    <p class="text-center">List of all teachers.</p>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="teacher_profile_view_portal">
+        <t t-call="portal.portal_layout">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <img src="/web/image/hr.employee/{{teacher.id}}/image_1920" alt="teacher_photo" class="rounded-circle img-fluid" style="width:150px;" />
+                                <h5 class="my-3"><t t-out="teacher.name"/></h5>
+                                <p class="text-muted mb-1"><t t-out="teacher.job_id.name"/></p>
+                                <p class="text-muted mb-4"><t t-out="teacher.department_id.name"/></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                               <!-- Teacher profile details here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-5">
+                <h1>Chatter Feature</h1>
+                <t t-call="portal.message_thread">
+                    <t t-set="object" t-value="teacher" />
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>

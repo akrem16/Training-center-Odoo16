@@ -1,21 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="category_hr_enseignant" model="ir.module.category">
-        <field name="name">Centre de formation</field>
+    <record id="category_hr_property" model="ir.module.category">
+        <field name="name">Centre de formation BHS</field>
         <field name="description">Catégorie pour le Centre de formation</field>
     </record>
 
-    <record id="group_hr_enseignant" model="res.groups">
-        <field name="name">Enseignant</field>
-        <field name="implied_ids" eval="[(6, 0, [ref('base.group_private_addresses'), ref('base.group_user')])]"/>
+    <record id="group_respnsable_rh" model="res.groups">
+        <field name="name">Responsable ressources humaines</field>
+        <field name="category_id" ref="Training_center.category_hr_property"/>
+    </record>
 
+    <record id="group_comptable" model="res.groups">
+        <field name="name">Comptable</field>
+        <field name="category_id" ref="Training_center.category_hr_property"/>
     </record>
 
     <record id="group_hr_etudiant" model="res.groups">
         <field name="name">Etudiant</field>
-        <field name="implied_ids" eval="[(6, 0, [ref('base.group_private_addresses'), ref('base.group_user')])]"/>
-
+        <field name="category_id" ref="Training_center.category_hr_property"/>
     </record>
+
+
+    <record id="group_hr_enseignat" model="res.groups">
+        <field name="name">Enseignat</field>
+        <field name="category_id" ref="Training_center.category_hr_property"/>
+    </record>
+
+        <record id="group_hr_emploi" model="res.groups">
+        <field name="name">Emploi du temps</field>
+        <field name="category_id" ref="Training_center.category_hr_property"/>
+    </record>
+
+            <record id="group_hr_dashborad" model="res.groups">
+        <field name="name">Dashborad</field>
+        <field name="category_id" ref="Training_center.category_hr_property"/>
+    </record>
+
+
+    <odoo>
+    <!-- Déclaration des autorisations -->
+    <record id="access_academy_classroom_teacher" model="ir.model.access">
+        <field name="name">Access Classroom for Teachers</field>
+        <field name="model_id" ref="Emploi_du_temps.model_academy_classroom"/>
+        <field name="group_id" ref="group_hr_enseignat"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+</odoo>
+
+
 
 </odoo>

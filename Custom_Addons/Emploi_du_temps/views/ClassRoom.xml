@@ -3,12 +3,17 @@
         <field name="name">academy.classroom.form</field>
         <field name="model">academy.classroom</field>
         <field name="arch" type="xml">
-            <form string="Classroom">
+            <form string="Emploi du temps">
                 <sheet>
                     <group>
-                        <field name="name"/>
+                        <field name="classroom_name_id" string="Salle"/>
+                        <field name="name" invisible="1"/>
                         <field name="capacity"/>
                         <field name="equipment_ids" widget="many2many_tags"/>
+                        <field name="booking_datetime"/>
+                        <field name="duration" widget="float_time"/>
+                        <field name="enseignant_id"/>
+                        <field name="course_id"/>
                     </group>
                 </sheet>
             </form>
@@ -19,16 +24,54 @@
         <field name="name">academy.classroom.tree</field>
         <field name="model">academy.classroom</field>
         <field name="arch" type="xml">
-            <tree string="Classrooms">
-                <field name="name"/>
-                <field name="capacity"/>
+            <tree string="Emploi du temps" default_order="booking_datetime desc"
+                  decoration-danger="booking_datetime &lt; current_date"
+                  decoration-success="booking_datetime &gt;= current_date">
+                <field name="name" string="Salle"/>
+                <field name="booking_datetime"/>
+                <field name="enseignant_id"/>
             </tree>
         </field>
     </record>
 
-    <record model="ir.actions.act_window" id="action_academy_classroom">
-        <field name="name">Classrooms</field>
+
+    <record id="view_academy_classroom_calendar" model="ir.ui.view">
+        <field name="name">academy.classroom.calendar</field>
+        <field name="model">academy.classroom</field>
+        <field name="arch" type="xml">
+            <calendar string="Emploi" date_start="booking_datetime" date_stop="booking_datetime"
+                      date_delay="duration" color="booking_status" quick_add="False" >
+                <field name="name" filters="1" string="Classe"/>
+                <field name="capacity"/>
+                <field name="booking_datetime"/>
+                <field name="equipment_ids"/>
+                <field name="duration"/>
+                <field name="enseignant_id"/>
+                <field name="course_id"/>
+            </calendar>
+        </field>
+    </record>
+
+
+    <record id="action_academy_classroom" model="ir.actions.act_window">
+        <field name="name">Emploi du temps</field>
         <field name="res_model">academy.classroom</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">calendar,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Define the availability of each teacher.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_academy_classroom_calander" model="ir.actions.act_window">
+        <field name="name">Emploi du temps</field>
+        <field name="res_model">academy.classroom</field>
+        <field name="view_mode">calendar</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Define the availability of each teacher.
+            </p>
+        </field>
     </record>
 </odoo>

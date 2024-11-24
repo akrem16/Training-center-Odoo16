@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Vue Formulaire pour les catégories de cours -->
+        <record id="view_course_category_form" model="ir.ui.view">
+            <field name="name">academy.course.category.form</field>
+            <field name="model">academy.course.category</field>
+            <field name="arch" type="xml">
+                <form string="Course Category">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

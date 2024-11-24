@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_compte_comptable_tree">
+            <field name="name">compte.comptable.tree</field>
+            <field name="model">compte.comptable</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <!-- Ajoutez d'autres champs de votre modèle -->
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_compte_comptable">
+            <field name="name">Comptes Comptables</field>
+            <field name="res_model">compte.comptable</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_root" name="Comptabilité"/>
+        <menuitem id="menu_comptes" name="Comptes Comptables" parent="menu_root" action="action_compte_comptable"/>
+    </data>
+</odoo>

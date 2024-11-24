@@ -1,28 +1,63 @@
-# from odoo import http
-# from odoo.http import request
-#
-# class EnseignantCongeController(http.Controller):
-#     @http.route('/enseignant/conge', auth='user', type='json', methods=['POST'])
-#     def create_conge_for_enseignant(self, enseignant_id, status_conge_id, date_from, date_to, **kwargs):
-#         # Assurez-vous que l'utilisateur a les droits nécessaires pour créer une demande de congé
-#         Enseignant = request.env['hr.enseignant'].sudo()
-#         Leave = request.env['hr.leave'].sudo()
-#
-#         enseignant = Enseignant.browse(enseignant_id)
-#         if not enseignant.exists():
-#             return {'error': 'Enseignant non trouvé'}
-#
-#         # Assurez-vous que l'ID de l'enseignant est correctement mappé à un employé
-#         if not enseignant.employee_id:
-#             return {'error': 'Aucun employé associé à cet enseignant'}
-#
-#         demande_conge = Leave.create({
-#             'name': 'Congé Personnel',
-#             'employee_id': enseignant.employee_id.id,  # Utilisez employee_id de l'enseignant
-#             'enseignant_id': enseignant.id,
-#             'holiday_status_id': status_conge_id,
-#             'date_from': date_from,
-#             'date_to': date_to,
-#         })
-#
-#         return {'success': 'Demande de congé créée avec succès', 'demande_conge_id': demande_conge.id}
+from odoo.addons.portal.controllers.portal import CustomerPortal, pager
+from odoo.http import request
+from odoo import http, _
+
+class WeblearnsTeacherPortal(CustomerPortal):
+
+    @http.route(["/new/teacher"], type="http", methods=["POST", "GET"], auth="user", website=True)
+    def registerTeacherProfile(self, **kw):
+        subject_list = request.env['academy.subject'].search([])
+        vals = {'subjects': subject_list, 'page_name': "register_teacher"}
+        if request.httprequest.method == "POST":
+            print(kw)
+            error_list = []
+            if not kw.get("name"):
+                error_list.append(_("Name field is mandatory."))
+            if not kw.get("subject"):
+                error_list.append(_("Subject field is mandatory."))
+            if not kw.get("subject").isdigit():
+                error_list.append(_("Invalid subject field."))
+            elif not request.env['academy.subject'].search([('id', '=', int(kw.get("subject")))]):
+                error_list.append(_("Invalid subject field selected value."))
+            elif not error_list:
+                request.env['hr.enseignant'].create({
+                    "name": kw.get("name"),
+                    "subject_ids": [(6, 0, [int(kw.get("subject"))])]
+                })
+                success = _("Successfully registered teacher!")
+                vals['success_msg'] = success
+            else:
+                vals['error_list'] = error_list
+        else:
+            print("GET Method..........")
+
+        return request.render("your_module.new_teacher_form_view_portal", vals)
+
+    def _prepare_home_portal_values(self, counters):
+        rtn = super(WeblearnsTeacherPortal, self)._prepare_home_portal_values(counters)
+        rtn['teacher_counts'] = request.env['hr.enseignant'].search_count([])
+        return rtn
+
+    @http.route(['/my/teachers', '/my/teachers/page/<int:page>'], type='http', auth="user", website=True)
+    def weblearnsTeacherListView(self, page=1, sortby='name', search="", search_in="All", groupby="none", **kw):
+        # Implement similar logic for sorting, grouping, and filtering teachers
+        vals = {
+            # Populate 'teachers_group_list' with grouped and sorted teacher data
+            'group_teachers': [],  # This needs to be implemented
+            'page_name': 'teachers_list_view',
+            # Include additional necessary values like 'pager', 'sortby', etc.
+        }
+
+        return request.render("your_module.weblearns_teachers_list_view_portal", vals)
+
+    @http.route(['/my/teacher/<model("hr.enseignant"):teacher_id>'], auth="user", type='http', website=True)
+    def weblearnsTeacherFormView(self, teacher_id, **kw):
+        # Implementation for a detailed teacher view
+        vals = {
+            "teacher": teacher_id,
+            'page_name': 'teacher_form_view'
+        }
+
+        return request.render("your_module.weblearns_teacher_form_view_portal", vals)
+
+    # Implement any additional routes/methods as needed for your application

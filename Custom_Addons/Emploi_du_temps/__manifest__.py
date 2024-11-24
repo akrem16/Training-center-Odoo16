@@ -9,22 +9,28 @@
     'sequence': -101,
     'summary': '',
     'website': '',
-    'depends': ['base' , 'Training_center'],
+    'depends': ['base', 'Training_center'],
     'data': [
         'security/ir.model.access.csv',
-        'views/Calendrier_Cours.xml',
+        'security/hr_attendance_security.xml',
         'views/ClassRoom.xml',
         'views/Equipment.xml',
         'views/TeacherAvailability.xml',
         'views/menu.xml',
         'views/Emploi_du_temps.xml',
+        'views/dashboard.xml'
+
     ],
-'qweb': [
+    'qweb': [
     ],
     'demo': [],
     'installable': True,
     'application': True,
     'auto_install': False,
-    'assets': {},
+    'assets': {
+        'web.assets_backend': [
+            'Emploi_du_temps/static/src/js/dashboard.js',
+        ],
+    },
 
 }

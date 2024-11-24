@@ -3,40 +3,35 @@
     <data>
 
         <!-- Define the Menu Items -->
-        <menuitem id="menu_emploi_du_temps" name="Emploi Du Temps" sequence="8"/>
+        <menuitem id="menu_emploi_du_temps" name="Emploi Du Temps" sequence="50"/>
         <menuitem id="menu_emploi_du_temp" name="Emploi Du Temps"
                   parent="menu_emploi_du_temps" sequence="5"
-                  action="action_teacher_calendrier"/>
+                  action=""/>
 
+<!--        <menuitem id="menu_academy_dashborad"-->
+<!--                  name="Tableaux de bord"-->
+<!--                  parent="menu_emploi_du_temps"-->
+<!--                  action="hospital_dashboard"-->
+<!--                  sequence="17"/>-->
 
-                <!-- Menu Item for Teacher Availability -->
-        <menuitem id="menu_academy_teacher_availability"
-                  name="Disponabilité"
-                  parent="menu_emploi_du_temps"
-                  action="action_teacher_availability"
-                  sequence="20"/>
+<!--        <menuitem id="menu_academy_teacher_availability"-->
+<!--                  name="Disponabilité"-->
+<!--                  parent="menu_emploi_du_temps"-->
+<!--                  action="action_teacher_availability"-->
+<!--                  sequence="19"/>-->
 
 
         <menuitem id="menu_academy_class_room"
-                  name="Classes"
+                  name="Emploi du temps"
                   parent="menu_emploi_du_temps"
                   action="action_academy_classroom"
-                  sequence="20"/>
+                  sequence="18"/>
 
         <menuitem id="menu_academy_equipment"
                   name="Equipment"
                   parent="menu_emploi_du_temps"
                   action="action_teacher_equipment"
                   sequence="20"/>
-
-<!--    <menuitem id="academy_main_menu" name="Academy"/>-->
-<!--    -->
-<!--    <menuitem id="academy_courses_menu" name="Courses" parent="academy_main_menu"/>-->
-<!--    <menuitem id="academy_classrooms_menu" name="Classrooms" parent="academy_main_menu"/>-->
-<!--    <menuitem id="academy_equipment_menu" name="Equipment" parent="academy_main_menu"/>-->
-<!--    <menuitem id="academy_teacher_availability_menu" name="Teacher Availability" parent="academy_main_menu"/>-->
-
-
 
     </data>
 </odoo>

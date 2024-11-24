@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="act_global_statique" model="ir.actions.act_window">
+        <field name="name">Cours statiqtique</field>
+        <field name="res_model">academy.course</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="Training_center.cours_view_graph"/>
+    </record>
+
+    <record id="act_employee_view_graph" model="ir.actions.act_window">
+        <field name="name">Employees</field>
+        <field name="res_model">hr.department</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="Training_center.employee_view_graph"/>
+    </record>
+
+    <record id="act_cours_view_graph" model="ir.actions.act_window">
+        <field name="name">Formation</field>
+        <field name="res_model">academy.course</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="Training_center.view_course_format_pie_chart"/>
+    </record>
+
+
+    <record id="act_employe_list" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="act_session_by_course_graph" model="ir.actions.act_window">
+        <field name="name">Sessions par Cours</field>
+        <field name="res_model">academy.course.session</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="Training_center.view_sessions_by_course_graph"/>
+    </record>
+
+
+    <record id="dashboard_form_view_global" model="ir.ui.view">
+        <field name="name">Dashboard Form</field>
+        <field name="model">board.board</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Dashboard">
+                <board style="1-2">
+                    <column>
+                        <action
+                                string="Graphe du Nombre d'étudiants par Formation"
+                                name="%(Training_center.act_global_statique)d"/>
+                        <action
+                                string="Répartition des Formations : En Ligne vs Présentiel"
+                                name="%(Training_center.act_cours_view_graph)d"/>
+
+                        <action
+                                string="Sessions par Cours"
+                                name="%(Training_center.act_session_by_course_graph)d"/>
+
+                    </column>
+
+                    <column>
+                        <action
+                                string="Graphe du Nombre d'employés par Département"
+                                name="%(act_employee_view_graph)d"/>
+                        <action
+                                string="Liste des employés"
+                                name="%(act_employe_list)d"/>
+                    </column>
+
+                </board>
+            </form>
+        </field>
+    </record>
+
+    <record id="hospital_dashboard_global" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">board.board</field>
+        <field name="view_mode">form</field>
+        <field name="usage">menu</field>
+        <field name="view_id" ref="Training_center.dashboard_form_view_global"/>
+    </record>
+
+
+</odoo>

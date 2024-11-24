@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_academy_course_form_inherit_enseignant" model="ir.ui.view">
+        <field name="name">academy.course.form.inherit.enseignant</field>
+        <field name="model">academy.course</field>
+        <field name="inherit_id" ref="Training_center.view_academy_course_form"/> <!-- Assurez-vous que le 'module_name' et 'view_id' sont corrects -->
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet" position="after"> <!-- Utiliser 'after' pour placer le footer après le sheet -->
+                <footer>
+                    <button name="generate_timetable" string="Generate Timetable" type="object" class="oe_highlight"/>
+                </footer>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_open_cour_inherit_form" model="ir.actions.act_window">
+        <field name="name">Créer Utilisateur</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">academy.course</field> <!-- Corrigé: 'academy.course' -->
+        <field name="views">[(0, 'form')]</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_initial_mode': 'edit', 'default_is_employee': True}</field>
+    </record>
+</odoo>
+

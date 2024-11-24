@@ -3,11 +3,11 @@
     <data>
         <!-- Action to open the course views -->
         <record id="action_course" model="ir.actions.act_window">
-            <field name="name">Cours</field>
+            <field name="name">Formation</field>
             <field name="res_model">academy.course</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="view_mode">kanban,tree,form</field>
-<!--            <field name="search_view_id" ref="Training_center.view_academy_course_search"/>-->
+            <field name="view_mode">kanban,tree,form,graph</field>
+            <!--            <field name="search_view_id" ref="Training_center.view_academy_course_search"/>-->
             <field name="context">{}</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
@@ -24,11 +24,11 @@
             <field name="arch" type="xml">
                 <tree string="Course">
                     <field name="name"/>
-                    <field name="category"/>
+                    <field name="category_id"/>
                     <field name="course_format"/>
                     <field name="duration"/>
                     <field name="lang"/>
-                    <field name="enseignant_id"/>
+                    <field name="fee" string="Frais"/>
                 </tree>
             </field>
         </record>
@@ -39,18 +39,45 @@
             <field name="model">academy.course</field>
             <field name="arch" type="xml">
                 <form string="Course">
+
                     <sheet>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                                attrs="{'invisible': [('active', '=', True)]}"/>
                         <group>
                             <field name="name"/>
                             <field name="description"/>
-                            <field name="category"/>
-                            <field name="learning_objectives"/>
+                            <field name="category_id"/>
                             <field name="course_format"/>
                             <field name="duration"/>
                             <field name="materials_resources"/>
                             <field name="lang"/>
-                            <field name="enseignant_id"/>
+                            <field name="fee" string="Frais"/>
+                            <field name="active" invisible="1"/>
+
                         </group>
+
+                        <notebook>
+                            <page string="Sessions">
+                                <field name="session_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="start_date"/>
+                                        <field name="end_date"/>
+                                        <field name="seats"/>
+                                        <field name="enseignant_id"/>
+                                        <field name="state" decoration-info="state == 'draft'"
+                                               decoration-warning="state == 'in_progress'"
+                                               decoration-success="state == 'completed'"
+                                               decoration-danger="state == 'cancel'"
+                                               decoration-primary="state == 'full'"
+                                               widget="badge"/>
+
+                                        <!--                                        <field name="taken_seats" widget="progressbar"/>-->
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+
                     </sheet>
                     <!-- Chatter -->
                     <div class="oe_chatter">
@@ -83,6 +110,13 @@
                                             <t t-out="record.total_etudiant.raw_value"/>
                                             Etudiant
                                         </button>
+                                        <div class="pt-2">
+                                            <h5>
+                                                <b>Frais :</b>
+                                                <field name="fee"/>
+                                                DT
+                                            </h5>
+                                        </div> <!-- Ajout des frais -->
                                     </div>
                                 </div>
                             </div>
@@ -93,20 +127,54 @@
         </record>
 
 
-        <!-- Search View for the cours -->
-<record id="view_academy_course_search" model="ir.ui.view">
-    <field name="name">academy.course.search</field>
-    <field name="model">academy.course</field>
-    <field name="arch" type="xml">
-        <search string="Search Courses">
-            <field name="name"/>
-            <searchpanel>
-                <field name="category" enable_counters="1"/>
-            </searchpanel>
-        </search>
-    </field>
-</record>
+        <record id="cours_view_graph" model="ir.ui.view">
+            <field name="name">academy.course.graph</field>
+            <field name="model">academy.course</field>
+            <field name="arch" type="xml">
+                <graph string="Activities Analysis" sample="1" type="pie">
+                    <field name="name" type="row"/>
+                    <field name="total_etudiant" type="measure"/>
+                </graph>
+            </field>
+        </record>
 
+        <record id="view_course_student_category_graph" model="ir.ui.view">
+            <field name="name">course.student.category.graph</field>
+            <field name="model">academy.course</field>
+            <field name="arch" type="xml">
+                <graph string="Student Distribution by Course Category" type="bar">
+                    <field name="category_id"/>
+                    <field name="total_etudiant" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+
+        <record id="view_course_format_pie_chart" model="ir.ui.view">
+            <field name="name">course.format.pie.chart</field>
+            <field name="model">academy.course</field>
+            <field name="arch" type="xml">
+                <graph string="Course Distribution by Format" type="pie">
+                    <field name="course_format"/>
+                    <field name="id" type="count"/>
+                </graph>
+            </field>
+        </record>
+
+
+        <!-- Search View for the cours -->
+        <record id="view_academy_course_search" model="ir.ui.view">
+            <field name="name">academy.course.search</field>
+            <field name="model">academy.course</field>
+            <field name="arch" type="xml">
+                <search string="Search Courses">
+                    <field name="category_id" string="Categorie"/>
+                    <searchpanel>
+                        <field name="category_id" enable_counters="1"/>
+                    </searchpanel>
+                </search>
+            </field>
+        </record>
 
 
     </data>

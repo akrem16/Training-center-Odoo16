@@ -7,82 +7,104 @@
             <field name="model">hr.enseignant</field>
             <field name="arch" type="xml">
                 <form string="Enseignant">
-                    <header>
-                        <button name="action_open_time_off" string="Congé" type="object" class="btn-primary"/>
-                    </header>
                     <sheet>
+
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                                attrs="{'invisible': [('active', '=', True)]}"/>
+                        <div name="button_box" class="oe_button_box">
+
+                            <button name="action_related_contacts"
+                                    class="oe_stat_button"
+                                    icon="fa-address-card-o"
+                                    type="object"
+                                    attrs="{'invisible': [('id', '=', False)]}">
+                                <div class="o_field_widget o_stat_info">
+                                    <span class="o_stat_text">Contacts</span>
+                                </div>
+                            </button>
+
+                        </div>
                         <div class="oe_title">
-                            <h1>Enseignant</h1>
+                            <h3>
+                                <field name="reference" readonly="1"/>
+                            </h3>
+                            <h1>
+                                <field name="name" string="Nom de l'enseignant" placeholder="Nom complet" required="1"/>
+                            </h1>
+                            <h2>
+                                <field name="job_title" string="Post" placeholder="Post" required="1"/>
+                            </h2>
                         </div>
                         <group>
-                            <group>
-                                <field name="name" placeholder="Nom enseignant"/>
-                                <field name="job_title" string="Titre de poste"/>
-                            </group>
-                            <group>
-                                <div class="o_employee_avatar" style="margin-left: 400px">
-                                    <field name="image_1920" widget='image' class="oe_avatar m-0"
-                                           options='{"zoom": true, "preview_image":"avatar_128"}'/>
+                            <!-- Ajustement des groupes d'informations -->
+                            <group string="Informations professionnelles">
+                                <field name="department_id" options="{'no_create': True}"/>
+                                <field name="company_id" string="Societe"/>
+                                <field name="job_id"/>
+                                <field name="matricule"/>
 
-                                </div>
+                                <field name="mobile_phone" widget="phone"/>
+                                <field name="work_email" widget="email"/>
+                                <field name="active" invisible="1"/>
                             </group>
-                            <group>
-                                <field name="mobile_pro" widget="phone"/>
-                                <field name="email_pro" widget="email"/>
-                            </group>
-                            <group>
-                                <field name="job_id" attrs="{'readonly': [('job_title','=','Enseignant')]}"/>
+                            <group string="Photo">
+                                <field name="image_1920" widget="image" class="oe_avatar"
+                                       options="{'preview_image': 'image_128', 'zoom': true}"/>
                             </group>
                         </group>
+                        <!-- Modification de l'ordre des pages dans notebook -->
                         <notebook>
-                            <page name="informations_personnelles" string="Informations Personnelles"
-                                  groups="hr.group_hr_user">
+                            <page string="Informations Personnelles">
+                                <!-- Réorganisation des champs -->
                                 <group>
-                                    <group string="Contact Privé">
-                                        <field name="email_pers" string="Email"/>
-                                        <field name="mobile_pers" string="Téléphone"/>
-                                        <separator name="citoyenneté" string="Citoyenneté"/>
-                                        <field name="lang" string="Langue"/>
-                                        <field name="genre" string="Genre"/>
-                                        <field name="date_naiss"/>
-                                        <separator name="education" string="Éducation"/>
-                                        <field name="certificat"/>
-                                        <field name="study_field"/>
-                                        <field name="study_school"/>
+                                    <group string="Contact Personnel">
+                                        <field name="private_email" widget="email"/>
+                                        <field name="phone" widget="phone"/>
+                                        <field name="lang"/>
+                                        <field name="gender"/>
+                                        <field name="birthday"/>
                                     </group>
                                     <group string="Statut Familial">
-                                        <field name="matrimonial"/>
+                                        <field name="marital"/>
                                         <field name="children"/>
-                                        <separator name="emergency" string="Urgence"/>
-                                        <field name="emergency_contact"/>
-                                        <field name="emergency_phone" class="o_force_ltr"/>
                                     </group>
                                 </group>
+                                <group string="Éducation et Urgence">
+                                    <field name="certificat"/>
+                                    <field name="study_field"/>
+                                    <field name="study_school"/>
+                                    <field name="emergency_contact"/>
+                                    <field name="emergency_phone" widget="phone"/>
+                                </group>
                             </page>
-
-
-                            <page name="informations_professionnelle" string="Informations Professionnelle"
-                                  groups="hr.group_hr_user">
+                            <page string="Autres Informations">
                                 <group>
-                                    <group string="Contact Privé">
-                                        <field name="company_id" string="Societe"/>
-                                        <field name="department_id" string="Department"/>
-                                        <separator name="horaire" string="Horaire"/>
-                                        <field name="resource_calendar_id" string="Horaire"/>>
+                                    <field name="category_ids" widget="many2many_tags"
+                                           options="{'color_field': 'color'}"/>
+                                    <group string="Barcode" name="identification_group">
+                                        <label for="barcode"/>
+                                        <div class="o_row">
+                                            <field name="barcode"/>
+                                            <button string="Generate" class="btn btn-link" type="object"
+                                                    name="generate_random_barcode"
+                                                    attrs="{'invisible': [('barcode', '!=', False)]}"/>
+                                            <button name="%(school_teacher_profile_report_temp)d" string="Print Badge"
+                                                    class="btn btn-link" type="action"
+                                                    attrs="{'invisible': [('barcode', '=', False)]}"/>
+                                        </div>
                                     </group>
                                 </group>
                             </page>
                         </notebook>
                     </sheet>
-                    <!-- Chatter -->
                     <div class="oe_chatter">
-                        <field name="message_follower_ids" groups="base.group_user"/>
-                        <field name="message_ids"/>
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
                     </div>
-
                 </form>
             </field>
         </record>
+
 
         <!-- Define the Tree View for hr.enseignant -->
         <record id="view_hr_enseignant_tree" model="ir.ui.view">
@@ -90,9 +112,10 @@
             <field name="model">hr.enseignant</field>
             <field name="arch" type="xml">
                 <tree string="Liste des Enseignants">
+                    <field name="reference" width="200" string="Reference enseignant"/>
                     <field name="name" width="200" string="Nom enseignat"/>
-                    <field name="mobile_pro" width="200"/>
-                    <field name="email_pro" width="200"/>
+                    <field name="mobile_phone" width="200"/>
+                    <field name="work_email" width="200"/>
                     <!--                    <field name="contract_type" width="200"/>-->
                 </tree>
             </field>
@@ -107,9 +130,8 @@
                 <kanban class="o_hr_enseignant_kanban" js_class="hr_enseignant_kanban" sample="1">
                     <field name="id"/>
                     <field name="image_128"/>
-                    <field name="email_pro"/>
-                    <field name="mobile_pro"/>
-                    <field name="genre"/>
+                    <field name="mobile_phone"/>
+                    <field name="gender"/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_hr_enseignant_kanban_record">
@@ -124,16 +146,16 @@
                                                 <field name="name" placeholder="Nom de l'enseignant"/>
                                             </strong>
                                             <div class="o_kanban_record_subtitle">
-                                                <field name="email_pro"/>
+                                                <field name="work_email"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div>
                                         <span class="text-muted">Mobile Pro:</span>
-                                        <field name="mobile_pro"/>
+                                        <field name="mobile_phone"/>
                                     </div>
                                     <div>
-                                        <field name="genre" widget="selection"/>
+                                        <field name="gender" widget="selection"/>
                                     </div>
                                     <div class="o_hr_enseignant_kanban_bottom">
                                         <field name="category_ids" widget="many2many_tags"
@@ -153,11 +175,13 @@
             <field name="name">hr.enseignant.search</field>
             <field name="model">hr.enseignant</field>
             <field name="arch" type="xml">
-                <search string="Search Znseiganat">
+                <search string="Search Enseiganat">
                     <!-- Here we add a filter by courses -->
                     <field name="course_ids" string="Cours" filter_domain="[('course_ids','ilike',self)]"/>
                     <field name="name" string="Nom" filter_domain="[('name','ilike',self)]"/>
                     <field name="department_id" string="department" filter_domain="[('department_id','ilike',self)]"/>
+                    <filter name="archived" string="Archived" domain="[('active', '=', False)]"/>
+
 
                     <searchpanel>
                         <field name="department_id"/>
@@ -170,13 +194,11 @@
 
         <!-- Define the Action for the Tree View -->
         <record id="action_enseignant_tree" model="ir.actions.act_window">
-            <field name="name">Enseignant</field>
+            <field name="name">Formateur</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.enseignant</field>
             <field name="view_mode">tree,kanban,form</field>
         </record>
-
-
 
 
     </data>

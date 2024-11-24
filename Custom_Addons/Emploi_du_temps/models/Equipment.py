@@ -5,4 +5,5 @@ class Equipment(models.Model):
     _description = 'Equipment'
 
     name = fields.Char(required=True)
+    quantity = fields.Integer(required=True)
     description = fields.Text(string="Description")

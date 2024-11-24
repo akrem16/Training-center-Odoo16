@@ -3,62 +3,78 @@
     <data>
 
         <!-- Define the Menu Items -->
-        <!--        <menuitem id="menu_hr_enseignant" name="Enseignant" sequence="10"/>-->
+        <menuitem id="menu_hr_training_center" name="Centre de formation BHS" sequence="1"
+                  groups="group_respnsable_rh"/>
 
-        <!--        <menuitem id="menu_hr_enseignant_list" name="Liste des Enseignants"-->
-        <!--                  parent="menu_hr_enseignant" sequence="10" action="action_enseignant_tree"/>-->
+        <menuitem id="menu_hr_centre" name="Tableaux de bord"
+                  parent="menu_hr_training_center" sequence="3"
+                  action="hospital_dashboard_global"/>
 
-        <!--        <menuitem id="menu_hr_enseignant_departements" name="Départements"-->
-        <!--                  parent="menu_hr_enseignant" sequence="20" action="hr.hr_department_kanban_action"/>-->
-
-
-        <!-- Define the Menu Items -->
-        <!--        <menuitem id="menu_hr_etudiant" name="Etudiant" sequence="10"/>-->
-
-        <!--        <menuitem id="menu_hr_etudiant_list" name="Liste des Etudiants"-->
-        <!--                  parent="menu_hr_etudiant" sequence="10"-->
-        <!--                  action="action_etudiant_tree"/>-->
-
-        <!--        <menuitem id="menu_hr_etudiant_departements" name="Cours"-->
-        <!--                  parent="menu_hr_etudiant" sequence="20"-->
-        <!--                  action="Training_center.action_course"/>-->
-
-
-        <!-- Define the Menu Items -->
-        <menuitem id="menu_hr_training_center" name="Training center" sequence="10"/>
-
-        <menuitem id="menu_hr_personnel" name="Employés"
+        <menuitem id="menu_hr_personnel" name="Personnel"
                   parent="menu_hr_training_center" sequence="5"
                   action="hr.open_view_employee_list_my"/>
 
-                 <menuitem id="menu_hr_enseignant_departements" name="Départements"
-                          parent="menu_hr_personnel" sequence="20" action="hr.hr_department_kanban_action"/>
+        <menuitem id="menu_hr_employee" name="Personnel"
+                  parent="menu_hr_personnel" sequence="5"
+                  action="hr.open_view_employee_list_my"/>
 
 
-        <menuitem id="menu_hr_enseignant" name="Enseignant"
-                  parent="menu_hr_training_center" sequence="10"
+        <menuitem id="menu_hr_employee_postes" name="Postes"
+                  parent="menu_hr_personnel" sequence="20" action="hr.action_hr_job"/>
+
+        <menuitem id="menu_hr_employee_recretements" name="Recrutement"
+                  parent="menu_hr_personnel" sequence="20" action="hr_recruitment.action_hr_job"/>
+
+        <menuitem id="menu_hr_conge" name="Congé"
+                  parent="menu_hr_personnel" sequence="21"
+                  action="hr_holidays.hr_leave_action_action_approve_department"/>
+
+        <menuitem id="menu_hr_contart" name="Contrats"
+                  parent="menu_hr_personnel" sequence="21" action="hr_contract.hr_contract_history_view_list_action"/>
+
+
+        <menuitem id="menu_hr_enseignant" name="Formateur"
+                  parent="menu_hr_training_center" sequence="9"
                   action="action_enseignant_tree"/>
 
-        <menuitem id="menu_hr_enseignant_list" name="enseignant"
-                  parent="menu_hr_enseignant" sequence="10"
-                  action="action_enseignant_tree"/>
 
-        <menuitem id="menu_hr_conge_list" name="Congé"
-                  parent="menu_hr_enseignant" sequence="10"
-                  action="hr_holidays.hr_leave_action_new_request"/>
+        <menuitem id="menu_hr_employee_departements_menu" name="Départements"
+                  parent="menu_hr_training_center" sequence="10" action="hr.hr_department_kanban_action"/>
 
 
         <menuitem id="menu_hr_training_center_list" name="Etudiant"
-                  parent="menu_hr_training_center" sequence="10"
+                  parent="menu_hr_training_center" sequence="11"
                   action="action_etudiant_tree"/>
 
-        <!--        <menuitem id="menu_hr_training_center_list" name="Etudiants"-->
-        <!--                  parent="menu_hr_training_center" sequence="10"-->
-        <!--                  action="action_etudiant_tree"/>-->
-
-        <menuitem id="menu_hr_etudiant_departements" name="Cours"
-                  parent="menu_hr_training_center" sequence="20"
+        <menuitem id="menu_hr_etudiant_departements" name="Formation"
+                  parent="menu_hr_training_center" sequence="12"
                   action="Training_center.action_course"/>
+
+        <menuitem id="menu_hr_etudiant_departements_list" name="Formation"
+                  parent="menu_hr_etudiant_departements" sequence="18"
+                  action="Training_center.action_course"/>
+
+        <menuitem id="menu_hr_formation_session" name="Sessions"
+                  parent="menu_hr_etudiant_departements" sequence="19"
+                  action="action_view_academy_course_session_tree"/>
+
+
+        <menuitem id="menu_hr_training_center_emploi" name="Emploi du temps"
+                  parent="menu_hr_training_center" sequence="13"
+                  action="Emploi_du_temps.action_academy_classroom_calander"/>
+
+
+        <menuitem id="sous_menu_hr_formation_emploi" name="Emploi du temps"
+                  parent="menu_hr_training_center_emploi" sequence="11"
+                  action="Emploi_du_temps.action_academy_classroom_calander"/>
+
+        <menuitem id="menu_hr_formation_equipment" name="Equipments"
+                  parent="menu_hr_training_center_emploi" sequence="19"
+                  action="Emploi_du_temps.action_teacher_equipment"/>
+
+        <menuitem id="menu_hr_employee_departements" name="Fiche de paie"
+                  parent="menu_hr_training_center" sequence="70"
+                  action="hr_payroll_community.action_view_hr_payslip_form"/>
 
 
     </data>

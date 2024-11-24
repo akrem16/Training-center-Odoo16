@@ -1,23 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-                <!-- Define the Action for the Tree View -->
-<!--        <record id="action_taining_center" model="ir.actions.act_window">-->
-<!--            <field name="name">Centre de formation</field>-->
-<!--            <field name="type">ir.actions.act_window</field>-->
-<!--            <field name="res_model">training.center</field>-->
-<!--            <field name="view_mode">tree,kanban,form</field>-->
-<!--        </record>-->
+        <record id="employee_view_graph" model="ir.ui.view">
+            <field name="name">hr.department.graph</field>
+            <field name="model">hr.department</field>
+            <field name="arch" type="xml">
+                <graph string="Employees by Department" type="pie">
+                    <field name="name" type="row"/>
+                    <field name="total_employee" type="measure"/>
+                </graph>
+            </field>
+        </record>
+    </data>
 
-        <!-- Define the Tree View-->
-<!--        <record id="view_hr_tree" model="ir.ui.view">-->
-<!--            <field name="name">training.center.tree</field>-->
-<!--            <field name="model">training.center</field>-->
-<!--            <field name="arch" type="xml">-->
-<!--                <tree string="Liste des Employes">-->
 
-<!--                </tree>-->
-<!--            </field>-->
-<!--        </record>-->
-=    </data>
+    <record id="inh_hr_employee_view_form" model="ir.ui.view">
+        <field name="name">hr.employee.view.form.inh</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+           <xpath expr="//field[@name='mobile_phone']" position="before">
+            <field name="CIN"/>
+        </xpath>
+        </field>
+    </record>
+
 </odoo>

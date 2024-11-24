@@ -1,6 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <odoo>
-    <data>
 
-    </data>
+    <record id="act_cours_static" model="ir.actions.act_window">
+        <field name="name">Cours Statique</field>
+        <field name="res_model">academy.course</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="Training_center.cours_view_graph"/>
+    </record>
+
+    <record id="act_book_appointment" model="ir.actions.act_window">
+        <field name="name">Book Appointments</field>
+        <field name="res_model">academy.classroom</field>
+        <field name="view_mode">calendar</field>
+        <field name="view_id" ref="Emploi_du_temps.view_academy_classroom_calendar"/>
+    </record>
+
+    <record id="act_patient_list" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="res_model">academy.classroom</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="act_cours_list" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="res_model">academy.course</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="act_enseigant_list" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="res_model">academy.teacher.availability</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="dashboard_form_view" model="ir.ui.view">
+        <field name="name">Dashboard Form</field>
+        <field name="model">board.board</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Dashboard">
+                <board style="1-2">
+                    <column>
+                        <action
+                                string="Réservation de Classe"
+                                name="%(Emploi_du_temps.act_patient_list)d"/>
+
+                        <action
+                                string="Enseignant Disponabilité"
+                                name="%(act_enseigant_list)d"/>
+
+                        <action
+                                string="Cours"
+                                name="%(act_cours_list)d"/>
+                    </column>
+                    <column>
+                        <action
+                                string="Réservation calendrier"
+                                name="%(act_book_appointment)d"/>
+                    </column>
+                </board>
+            </form>
+        </field>
+    </record>
+
+    <record id="hospital_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">board.board</field>
+        <field name="view_mode">form</field>
+        <field name="usage">menu</field>
+        <field name="view_id" ref="dashboard_form_view"/>
+    </record>
+
 </odoo>

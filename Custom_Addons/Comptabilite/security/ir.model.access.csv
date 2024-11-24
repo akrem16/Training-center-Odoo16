@@ -1,9 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_academy_classroom,academy.classroom,model_academy_classroom,,1,1,1,1
-access_academy_equipment,academy.equipment,model_academy_equipment,,1,1,1,1
-access_academy_teacher_availability,academy.teacher.availability,model_academy_teacher_availability,,1,1,1,1
-access_academy_day_of_week,academy.day.of.week,model_academy_day_of_week,,1,1,1,1
-access_academy_classroom_name,academy_classroom_name_model_access,model_academy_classroom_name,base.group_user,1,1,1,1
+
 
 
 

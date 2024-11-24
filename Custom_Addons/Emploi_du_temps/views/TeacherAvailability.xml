@@ -2,35 +2,63 @@
 <odoo>
     <data>
         <!-- TeacherAvailability Form View -->
- <record id="view_academy_teacher_availability_form" model="ir.ui.view">
-        <field name="name">academy.teacher.availability.form</field>
-        <field name="model">academy.teacher.availability</field>
-        <field name="arch" type="xml">
-            <form string="Teacher Availability">
-                <sheet>
-                    <group>
-                        <field name="enseignant_id"/>
-                        <field name="day_availabilities"/>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+        <record id="view_teacher_availability_form" model="ir.ui.view">
+            <field name="name">teacher.availability.form</field>
+            <field name="model">academy.teacher.availability</field>
+            <field name="arch" type="xml">
+                <form string="Teacher Availability">
+                    <sheet>
+                        <group>
+                            <field name="enseignant_id"/>
+                            <field name="name" invisible="1"/>
+                            <field name="booking"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
-    <record id="view_academy_teacher_availability_tree" model="ir.ui.view">
-        <field name="name">academy.teacher.availability.tree</field>
-        <field name="model">academy.teacher.availability</field>
-        <field name="arch" type="xml">
-            <tree string="Teacher Availabilities">
-                <field name="enseignant_id"/>
-            </tree>
-        </field>
-    </record>
+
+        <record id="view_academy_teacher_availability_tree" model="ir.ui.view">
+            <field name="name">academy.teacher.availability.tree</field>
+            <field name="model">academy.teacher.availability</field>
+            <field name="arch" type="xml">
+                <tree string="Teacher Availabilities" default_order="booking desc"
+                  decoration-danger="booking &lt; current_date"
+                  decoration-success="booking &gt;= current_date">
+                    <field name="enseignant_id"/>
+                    <field name="booking"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_teacher_availability_calendar" model="ir.ui.view">
+            <field name="name">teacher.availability.calendar</field>
+            <field name="model">academy.teacher.availability</field>
+            <field name="arch" type="xml">
+                <calendar string="Teacher Availability" date_start="booking" color ="enseignant_id">
+                    <field name="enseignant_id"/>
+                    <field name="name" invisible="1" filters="1" />
+                </calendar>
+            </field>
+        </record>
+
+
         <!-- Action for Teacher Availability -->
         <record id="action_teacher_availability" model="ir.actions.act_window">
-            <field name="name">Teacher Availability</field>
+            <field name="name">Enseignant Disponabilité</field>
             <field name="res_model">academy.teacher.availability</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Define the availability of each teacher.
+                </p>
+            </field>
+        </record>
+                <record id="action_teacher_availability_calander" model="ir.actions.act_window">
+            <field name="name">Enseignant Disponabilité</field>
+            <field name="res_model">academy.teacher.availability</field>
+            <field name="view_mode">calendar</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Define the availability of each teacher.

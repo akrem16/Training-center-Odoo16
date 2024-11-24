@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="student_registration_receipt_report_templat">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page"
+                         style="padding:30px; margin:auto; width:210mm; height:200mm; box-sizing: border-box; page-break-after: auto;">
+                        <!-- En-tête -->
+                        <div style="text-align:center; margin-bottom:20px;">
+                            <h3 style="color: #007bff; margin-bottom: 20px;">Facture d'Inscription</h3>
+                            <p>Facture INV: <span t-field="doc.numero_de_facture"/></p>
+                        </div>
+                        <div style="margin-bottom:20px;">
+                            <h4>Informations de l'étudiant:</h4>
+                            <table style="width:100%; border-collapse: collapse;">
+                                <tr>
+                                    <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+                                        <strong>Reference :</strong>
+                                    </td>
+                                    <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+                                        <span t-field="doc.reference"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+                                        <strong>Nom :</strong>
+                                    </td>
+                                    <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+                                        <span t-field="doc.name"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+                                        <strong>Date d'Inscription :</strong>
+                                    </td>
+                                    <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+                                        <span t-field="doc.date_inscription"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+                                        <strong>Email :</strong>
+                                    </td>
+                                    <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+                                        <span t-field="doc.email"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+                                        <strong>Téléphone :</strong>
+                                    </td>
+                                    <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+                                        <span t-field="doc.telephone"/>
+                                    </td>
+                                </tr>
+                                <!-- Ajouter d'autres informations si nécessaire -->
+                            </table>
+                        </div>
+                        <div class="course-details" style="margin-top:20px; margin-bottom:40px;">
+                            <h4 style="margin-bottom: 10px;">Détail des cours inscrits:</h4>
+                            <table style="width:100%; border-collapse: collapse;">
+                                <t t-foreach="doc.course_ids" t-as="course">
+                                    <tr>
+                                        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+                                            <span t-field="course.name"/>
+                                        </td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: right;">
+                                            <span t-field="course.fee"/>
+                                            DT
+                                        </td>
+                                    </tr>
+                                </t>
+                                <tr>
+                                    <td style="padding: 12px; border-top: 2px solid #007bff;">
+                                        <strong>Total Frais :</strong>
+                                    </td>
+                                    <td style="padding: 12px; border-top: 2px solid #007bff; text-align: right;">
+                                        <t t-set="total_fee" t-value="sum(doc.course_ids.mapped('fee'))"/>
+                                        <span t-esc="total_fee"/>
+                                        DT
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="text-align:center; margin-top:50px;">
+                            <p>Merci pour votre inscription !</p>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+
+    <!-- Custom paper format configuration -->
+
+
+</odoo>
+
+
