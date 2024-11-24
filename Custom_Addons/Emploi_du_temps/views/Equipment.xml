@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Equipment Form View -->
+ <record id="view_academy_equipment_form" model="ir.ui.view">
+        <field name="name">academy.equipment.form</field>
+        <field name="model">academy.equipment</field>
+        <field name="arch" type="xml">
+            <form string="Equipment">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_academy_equipment_tree" model="ir.ui.view">
+        <field name="name">academy.equipment.tree</field>
+        <field name="model">academy.equipment</field>
+        <field name="arch" type="xml">
+            <tree string="Equipments">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+        <record id="action_teacher_equipment" model="ir.actions.act_window">
+            <field name="name">Equipment Availability</field>
+            <field name="res_model">academy.equipment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Define the availability of each teacher.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

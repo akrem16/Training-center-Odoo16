@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- TeacherAvailability Form View -->
+ <record id="view_academy_teacher_availability_form" model="ir.ui.view">
+        <field name="name">academy.teacher.availability.form</field>
+        <field name="model">academy.teacher.availability</field>
+        <field name="arch" type="xml">
+            <form string="Teacher Availability">
+                <sheet>
+                    <group>
+                        <field name="enseignant_id"/>
+                        <field name="day_availabilities"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_academy_teacher_availability_tree" model="ir.ui.view">
+        <field name="name">academy.teacher.availability.tree</field>
+        <field name="model">academy.teacher.availability</field>
+        <field name="arch" type="xml">
+            <tree string="Teacher Availabilities">
+                <field name="enseignant_id"/>
+            </tree>
+        </field>
+    </record>
+        <!-- Action for Teacher Availability -->
+        <record id="action_teacher_availability" model="ir.actions.act_window">
+            <field name="name">Teacher Availability</field>
+            <field name="res_model">academy.teacher.availability</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Define the availability of each teacher.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

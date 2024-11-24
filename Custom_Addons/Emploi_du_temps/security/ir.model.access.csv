@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_academy_classroom,academy.classroom,model_academy_classroom,,1,1,1,1
+access_academy_course_schedule,academy.course.schedule,model_academy_course_schedule,,1,1,1,1
+access_academy_equipment,academy.equipment,model_academy_equipment,,1,1,1,1
+access_academy_teacher_availability,academy.teacher.availability,model_academy_teacher_availability,,1,1,1,1

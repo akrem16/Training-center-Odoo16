@@ -1,0 +1,2126 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* Training_center
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-06 14:52+0000\n"
+"PO-Revision-Date: 2024-06-06 14:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: Training_center
+#: model:ir.actions.report,print_report_name:Training_center.school_student_profile_report_temp
+msgid "'Student-Card'"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.report,print_report_name:Training_center.school_teacher_profile_report_temp
+msgid "'Teacher-Badge'"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.report,print_report_name:Training_center.student_registration_receipt_report
+msgid "('Reçu_' + (object.name or '').replace(' ', '_'))"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.portal_my_teacher
+msgid "/my/teachers"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.portal_my_teacher
+msgid "/teacher/time_off"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_kanban
+msgid "<b>Frais :</b>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+msgid "<span class=\"o_stat_text\">Contacts</span>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.hr_kanban_view_etudiants
+msgid "<span class=\"text-muted\">Email:</span>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.hr_kanban_view_enseignants
+msgid "<span class=\"text-muted\">Mobile Pro:</span>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.hr_kanban_view_etudiants
+msgid "<span class=\"text-muted\">Reference:</span>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.hr_kanban_view_etudiants
+msgid "<span>Matricule:</span>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.student_registration_receipt_report_templat
+msgid "<strong>Date d'Inscription :</strong>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.school_student_profile_report_template
+#: model_terms:ir.ui.view,arch_db:Training_center.school_teacher_profile_report_template
+#: model_terms:ir.ui.view,arch_db:Training_center.student_registration_receipt_report_templat
+msgid "<strong>Email :</strong>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.school_student_profile_report_template
+msgid "<strong>Matricule :</strong>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.school_student_profile_report_template
+#: model_terms:ir.ui.view,arch_db:Training_center.school_teacher_profile_report_template
+#: model_terms:ir.ui.view,arch_db:Training_center.student_registration_receipt_report_templat
+msgid "<strong>Nom :</strong>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.school_teacher_profile_report_template
+msgid "<strong>Poste :</strong>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.student_registration_receipt_report_templat
+msgid "<strong>Reference :</strong>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.school_student_profile_report_template
+#: model_terms:ir.ui.view,arch_db:Training_center.school_teacher_profile_report_template
+msgid "<strong>Telephone :</strong>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.student_registration_receipt_report_templat
+msgid "<strong>Total Frais :</strong>"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.student_registration_receipt_report_templat
+msgid "<strong>Téléphone :</strong>"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.constraint,message:Training_center.constraint_hr_etudiant_user_uniq
+msgid "A user cannot be linked to multiple employees in the same company."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__show_leaves
+msgid "Able to see Remaining Time Off"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__is_absent
+msgid "Absent Today"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__message_needaction
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__message_needaction
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__message_needaction
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__message_needaction
+#: model:ir.model.fields,field_description:Training_center.field_training_center__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__active
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__active
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__active
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__active
+msgid "Active"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.cours_view_graph
+msgid "Activities Analysis"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__departure_description
+msgid "Additional Information"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__additional_note
+msgid "Additional Note"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__address_home_id
+#: model:ir.model.fields,field_description:Training_center.field_training_center__address
+msgid "Address"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__adresse
+msgid "Adresse"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__badge_ids
+msgid ""
+"All employee badges, linked to the employee either directly or through the "
+"user"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__lang
+msgid ""
+"All the emails and documents sent to this contact will be translated in this"
+" language."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__allocation_display
+msgid "Allocation Display"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__allocation_remaining_display
+msgid "Allocation Remaining Display"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course__lang__english
+msgid "Anglais"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course__state__cancel
+#: model_terms:ir.ui.view,arch_db:Training_center.views_cours_session_form
+msgid "Annuler"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course_session__state__cancel
+msgid "Annulé"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_form
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_session_search
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseigant_search
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_etudiant_form
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_etudiant_search
+#: model_terms:ir.ui.view,arch_db:Training_center.views_cours_session_form
+msgid "Archived"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__message_attachment_count
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__message_attachment_count
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__message_attachment_count
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__message_attachment_count
+#: model:ir.model.fields,field_description:Training_center.field_training_center__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__hr_enseignant__certificat__other
+msgid "Autre"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+msgid "Autres Informations"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__avatar_1920
+msgid "Avatar"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__avatar_1024
+msgid "Avatar 1024"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__avatar_128
+msgid "Avatar 128"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__avatar_256
+msgid "Avatar 256"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__avatar_512
+msgid "Avatar 512"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__barcode
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__barcode
+msgid "Badge ID"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.school_teacher_profile_report_template
+msgid "Badge d'Enseignant"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__direct_badge_ids
+msgid "Badges directly linked to the employee"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__bank_account_id
+msgid "Bank Account Number"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_etudiant_form
+msgid "Barcode"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course__state__draft
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course_session__state__draft
+msgid "Brouillon"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_employee__CIN
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__CIN
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__matricule
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__matricule
+msgid "CIN"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.constraint,message:Training_center.constraint_hr_enseignant_CIN_name_unique
+#: model:ir.model.constraint,message:Training_center.constraint_hr_etudiant_CIN_name_unique
+msgid "CIN doit être unique"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__calendar_mismatch
+msgid "Calendar Mismatch"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.views_cours_session_form
+msgid "Cancel"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.school_student_profile_report_template
+msgid "Carte d'Etudiant"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_search
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_session_search
+msgid "Categorie"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__category_ids
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__category_ids
+msgid "Categories"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__category_id
+msgid "Catégorie"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.module.category,description:Training_center.category_hr_property
+msgid "Catégorie pour le Centre de formation"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.module.category,name:Training_center.category_hr_property
+#: model:ir.ui.menu,name:Training_center.menu_hr_training_center
+msgid "Centre de formation BHS"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__certificate
+msgid "Certificate Level"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.teacher_profile_view_portal
+msgid "Chatter Feature"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_etudiant__session_id
+msgid "Choisissez une session pour l'inscription."
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.actions.act_window,help:Training_center.action_view_academy_course_session_tree
+msgid "Cliquez pour ajouter une nouvelle session de cours."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__coach_id
+msgid "Coach"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__color
+msgid "Color Index"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__company_id
+msgid "Company"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__company_country_id
+msgid "Company Country"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__vehicle
+msgid "Company Vehicle"
+msgstr ""
+
+#. module: Training_center
+#: model:res.groups,name:Training_center.group_comptable
+msgid "Comptable"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model,name:Training_center.model_hr_leave
+#: model:ir.ui.menu,name:Training_center.menu_hr_conge
+msgid "Congé"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__emergency_contact
+msgid "Contact Name"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+msgid "Contact Personnel"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__emergency_phone
+msgid "Contact Phone"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__contracts_count
+msgid "Contract Count"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__contract_warning
+msgid "Contract Warning"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.ui.menu,name:Training_center.menu_hr_contart
+msgid "Contrats"
+msgstr ""
+
+#. module: Training_center
+#. odoo-python
+#: code:addons/Training_center/models/Etudiant.py:0
+#, python-format
+msgid "Copying is not allowed for this model."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__company_country_code
+msgid "Country Code"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__country_of_birth
+msgid "Country of Birth"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model,name:Training_center.model_academy_course
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__course_ids
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_session_tree
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseigant_search
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_etudiant_search
+msgid "Cours"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__course_id
+#: model_terms:ir.ui.view,arch_db:Training_center.views_cours_session_form
+msgid "Cours Associé"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model,name:Training_center.model_academy_course_category
+msgid "Cours Categorie"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.act_window,name:Training_center.act_global_statique
+msgid "Cours statiqtique"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_form
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_tree
+msgid "Course"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_course_category_form
+msgid "Course Category"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_course_format_pie_chart
+msgid "Course Distribution by Format"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__course_ids
+msgid "Courses"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.actions.act_window,help:Training_center.action_course
+msgid "Create your first course here"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__create_uid
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_category__create_uid
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__create_uid
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__create_uid
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__create_uid
+#: model:ir.model.fields,field_description:Training_center.field_training_center__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__create_date
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_category__create_date
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__create_date
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__create_date
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__create_date
+#: model:ir.model.fields,field_description:Training_center.field_training_center__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.actions.act_window,help:Training_center.action_etudiant_form
+msgid "Créez le premier étudiant pour ce cours."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__contract_id
+msgid "Current Contract"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__current_leave_state
+msgid "Current Time Off Status"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__current_leave_id
+msgid "Current Time Off Type"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__contract_id
+msgid "Current contract of the employee"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.student_registration_receipt_report_templat
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_kanban
+msgid "DT"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.act_window,name:Training_center.hospital_dashboard_global
+#: model_terms:ir.ui.view,arch_db:Training_center.dashboard_form_view_global
+msgid "Dashboard"
+msgstr ""
+
+#. module: Training_center
+#: model:res.groups,name:Training_center.group_hr_dashborad
+msgid "Dashborad"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__date_inscription
+msgid "Date d'inscription"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__start_date
+#: model_terms:ir.ui.view,arch_db:Training_center.views_cours_session_form
+msgid "Date de Début"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__end_date
+#: model_terms:ir.ui.view,arch_db:Training_center.views_cours_session_form
+msgid "Date de Fin"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__date_naissance
+msgid "Date de naissance"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__birthday
+msgid "Date of Birth"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__time_off_ids
+msgid "Demandes de Congé"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__department_id
+msgid "Department"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__departure_date
+msgid "Departure Date"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__departure_reason_id
+msgid "Departure Reason"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__description
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_category__description
+#: model:ir.model.fields,field_description:Training_center.field_training_center__description
+msgid "Description"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__direct_badge_ids
+msgid "Direct Badge"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__subordinate_ids
+msgid "Direct and indirect subordinates"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__child_ids
+msgid "Direct subordinates"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__display_name
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_category__display_name
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__display_name
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__display_name
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__display_name
+#: model:ir.model.fields,field_description:Training_center.field_training_center__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__hr_enseignant__certificat__doctor
+msgid "Doctorat"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__study_field
+msgid "Domaine d'Étude"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__driving_license
+msgid "Driving License"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__duration
+msgid "Durée (heures)"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.ui.menu,name:Training_center.menu_hr_employee_departements_menu
+msgid "Départements"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.student_registration_receipt_report_templat
+msgid "Détail des cours inscrits:"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__email
+#: model:ir.model.fields,field_description:Training_center.field_training_center__email
+msgid "Email"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.ui.menu,name:Training_center.menu_hr_training_center_emploi
+#: model:ir.ui.menu,name:Training_center.sous_menu_hr_formation_emploi
+#: model:res.groups,name:Training_center.group_hr_emploi
+msgid "Emploi du temps"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model,name:Training_center.model_hr_employee
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__employee_id
+msgid "Employee"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__badge_ids
+msgid "Employee Badges"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__contract_ids
+msgid "Employee Contracts"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__goal_ids
+msgid "Employee HR Goals"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__name
+msgid "Employee Name"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__employee_type
+msgid "Employee Type"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__bank_account_id
+msgid "Employee bank account to pay salaries"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.act_window,name:Training_center.act_employee_view_graph
+msgid "Employees"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.employee_view_graph
+msgid "Employees by Department"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course__state__in_progress
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course_session__state__in_progress
+msgid "En cours"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course__course_format__online
+msgid "En ligne"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model,name:Training_center.model_hr_enseignant
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__enseignant_id
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__enseignant_id
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+#: model_terms:ir.ui.view,arch_db:Training_center.views_cours_session_form
+msgid "Enseignant"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_employee__enseignant_id
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__enseignant_id
+#: model:ir.model.fields,field_description:Training_center.field_hr_leave__enseignant_id
+msgid "Enseignant Associé"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_res_users__enseignant_id
+msgid "Enseignant associé"
+msgstr ""
+
+#. module: Training_center
+#: model:res.groups,name:Training_center.group_hr_enseignat
+msgid "Enseignat"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__address_home_id
+msgid ""
+"Enter here the private address of the employee, not the one linked to your "
+"company."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.ui.menu,name:Training_center.menu_hr_formation_equipment
+msgid "Equipments"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course__lang__spanish
+msgid "Espagnol"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.act_window,name:Training_center.action_etudiant_tree
+#: model:ir.model,name:Training_center.model_hr_etudiant
+#: model:ir.ui.menu,name:Training_center.menu_hr_training_center_list
+#: model:res.groups,name:Training_center.group_hr_etudiant
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_kanban
+msgid "Etudiant"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.student_registration_receipt_report_templat
+msgid "Facture INV:"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.student_registration_receipt_report_templat
+msgid "Facture d'Inscription"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.ui.menu,name:Training_center.menu_hr_employee_departements
+msgid "Fiche de paie"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__first_contract_date
+msgid "First Contract Date"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__message_follower_ids
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__message_follower_ids
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__message_follower_ids
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__message_follower_ids
+#: model:ir.model.fields,field_description:Training_center.field_training_center__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__message_partner_ids
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__message_partner_ids
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__message_partner_ids
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__message_partner_ids
+#: model:ir.model.fields,field_description:Training_center.field_training_center__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__course_format
+msgid "Format du cours"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.act_window,name:Training_center.action_enseignant_tree
+#: model:ir.ui.menu,name:Training_center.menu_hr_enseignant
+msgid "Formateur"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.act_window,name:Training_center.act_cours_view_graph
+#: model:ir.actions.act_window,name:Training_center.action_course
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__course_id
+#: model:ir.ui.menu,name:Training_center.menu_hr_etudiant_departements
+#: model:ir.ui.menu,name:Training_center.menu_hr_etudiant_departements_list
+msgid "Formation"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__fee
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_form
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_tree
+msgid "Frais"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course__lang__french
+msgid "Français"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__leave_date_from
+msgid "From Date"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__hr_etudiant__genre__female
+msgid "Féminin"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__gender
+msgid "Gender"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_etudiant_form
+msgid "Generate"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__genre
+msgid "Genre"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__hr_enseignant__certificat__graduate
+msgid "Gradué"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.dashboard_form_view_global
+msgid "Graphe du Nombre d'employés par Département"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.dashboard_form_view_global
+msgid "Graphe du Nombre d'étudiants par Formation"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__has_badges
+msgid "Has Badges"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__has_message
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__has_message
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__has_message
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__has_message
+#: model:ir.model.fields,field_description:Training_center.field_training_center__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.teacher_time_off_dashboard
+msgid "Here, you can view and manage your time off requests."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__km_home_work
+msgid "Home-Work Distance"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__resource_calendar_id
+msgid "Horaire"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__hr_icon_display
+msgid "Hr Icon Display"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__hr_presence_state
+msgid "Hr Presence State"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__id
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_category__id
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__id
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__id
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__id
+#: model:ir.model.fields,field_description:Training_center.field_training_center__id
+msgid "ID"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__id_card
+msgid "ID Card Copy"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__barcode
+#: model:ir.model.fields,help:Training_center.field_hr_etudiant__barcode
+msgid "ID used for employee identification."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__identification_id
+msgid "Identification No"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_academy_course__message_needaction
+#: model:ir.model.fields,help:Training_center.field_academy_course_session__message_needaction
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__message_needaction
+#: model:ir.model.fields,help:Training_center.field_hr_etudiant__message_needaction
+#: model:ir.model.fields,help:Training_center.field_training_center__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_academy_course__message_has_error
+#: model:ir.model.fields,help:Training_center.field_academy_course__message_has_sms_error
+#: model:ir.model.fields,help:Training_center.field_academy_course_session__message_has_error
+#: model:ir.model.fields,help:Training_center.field_academy_course_session__message_has_sms_error
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__message_has_error
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__message_has_sms_error
+#: model:ir.model.fields,help:Training_center.field_hr_etudiant__message_has_error
+#: model:ir.model.fields,help:Training_center.field_hr_etudiant__message_has_sms_error
+#: model:ir.model.fields,help:Training_center.field_training_center__message_has_error
+#: model:ir.model.fields,help:Training_center.field_training_center__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__active
+msgid ""
+"If the active field is set to False, it will allow you to hide the resource "
+"record without removing it."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__image_1920
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__image
+msgid "Image"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.report,name:Training_center.school_student_profile_report_temp
+msgid "Imprimer la carte"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.report,name:Training_center.student_registration_receipt_report
+msgid "Imprimer le Reçu d'Inscription"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.report,name:Training_center.school_teacher_profile_report_temp
+msgid "Imprimer le badge"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__child_all_count
+msgid "Indirect Subordinates Count"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+msgid "Informations Personnelles"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.student_registration_receipt_report_templat
+msgid "Informations de l'étudiant:"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+msgid "Informations professionnelles"
+msgstr ""
+
+#. module: Training_center
+#. odoo-python
+#: code:addons/Training_center/controllers/main.py:0
+#, python-format
+msgid "Invalid subject field selected value."
+msgstr ""
+
+#. module: Training_center
+#. odoo-python
+#: code:addons/Training_center/controllers/main.py:0
+#, python-format
+msgid "Invalid subject field."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__message_is_follower
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__message_is_follower
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__message_is_follower
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__message_is_follower
+#: model:ir.model.fields,field_description:Training_center.field_training_center__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__job_title
+msgid "Job Title"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_res_users__enseignant_id
+msgid "L'enseignant associé à cet utilisateur."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__user_id
+msgid "L'utilisateur Odoo lié à cet enseignant."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__lang
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__lang
+msgid "Langue"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__last_activity
+msgid "Last Activity"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__last_activity_time
+msgid "Last Activity Time"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course____last_update
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_category____last_update
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session____last_update
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant____last_update
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant____last_update
+#: model:ir.model.fields,field_description:Training_center.field_training_center____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__write_uid
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_category__write_uid
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__write_uid
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__write_uid
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__write_uid
+#: model:ir.model.fields,field_description:Training_center.field_training_center__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__write_date
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_category__write_date
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__write_date
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__write_date
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__write_date
+#: model:ir.model.fields,field_description:Training_center.field_training_center__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: Training_center
+#. odoo-python
+#: code:addons/Training_center/models/CoursSession.py:0
+#, python-format
+msgid "Le format de la date de début n'est pas valide."
+msgstr ""
+
+#. module: Training_center
+#. odoo-python
+#: code:addons/Training_center/models/CoursSession.py:0
+#, python-format
+msgid "Le format de la date de fin n'est pas valide."
+msgstr ""
+
+#. module: Training_center
+#. odoo-python
+#: code:addons/Training_center/models/Employe.py:0
+#: code:addons/Training_center/models/Enseignant.py:0
+#: code:addons/Training_center/models/Enseignant.py:0
+#, python-format
+msgid "Le matricule doit contenir exactement 8 chiffres."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.constraint,message:Training_center.constraint_academy_course_course_name_unique
+msgid "Le nom du cours doit être unique"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.constraint,message:Training_center.constraint_academy_course_name_description_check
+msgid "Le nom et la description du cours ne peuvent pas être identiques."
+msgstr ""
+
+#. module: Training_center
+#. odoo-python
+#: code:addons/Training_center/models/Enseignant.py:0
+#, python-format
+msgid "Le numéro de téléphone mobile doit contenir exactement 8 chiffres."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_etudiant__session_ids
+msgid "Les sessions auxquelles l'étudiant est inscrit."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__hr_enseignant__certificat__bachelor
+msgid "Licence"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.teachers_list_view_portal
+msgid "List of all teachers."
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_tree
+msgid "Liste des Enseignants"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.dashboard_form_view_global
+msgid "Liste des employés"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__message_main_attachment_id
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__message_main_attachment_id
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__message_main_attachment_id
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__message_main_attachment_id
+#: model:ir.model.fields,field_description:Training_center.field_training_center__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__parent_id
+msgid "Manager"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__marital
+msgid "Marital Status"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__hr_etudiant__genre__male
+msgid "Masculin"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__hr_enseignant__certificat__master
+msgid "Master"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__materials_resources
+msgid "Matériaux et ressources"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__member_of_department
+msgid "Member of department"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.student_registration_receipt_report_templat
+msgid "Merci pour votre inscription !"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__message_has_error
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__message_has_error
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__message_has_error
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__message_has_error
+#: model:ir.model.fields,field_description:Training_center.field_training_center__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__message_ids
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__message_ids
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__message_ids
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__message_ids
+#: model:ir.model.fields,field_description:Training_center.field_training_center__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_training_center__mobile
+msgid "Mobile"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__resultat_examen
+msgid "Moyenne"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.portal_my_teacher
+msgid "My Teachers"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_category__name
+#: model:ir.model.fields,field_description:Training_center.field_training_center__name
+msgid "Name"
+msgstr ""
+
+#. module: Training_center
+#. odoo-python
+#: code:addons/Training_center/controllers/main.py:0
+#, python-format
+msgid "Name field is mandatory."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__country_id
+msgid "Nationality (Country)"
+msgstr ""
+
+#. module: Training_center
+#. odoo-python
+#: code:addons/Training_center/models/Enseignant.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__certificat
+msgid "Niveau de Certificat"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__name
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_session_search
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseigant_search
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_etudiant_form
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_etudiant_search
+msgid "Nom"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+msgid "Nom complet"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.hr_kanban_view_enseignants
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+msgid "Nom de l'enseignant"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.hr_kanban_view_etudiants
+msgid "Nom de l'étudiant"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_tree
+msgid "Nom enseignat"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_etudiant_tree
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_etudiant_form
+msgid "Nom etudiant"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__seats
+#: model_terms:ir.ui.view,arch_db:Training_center.views_cours_session_form
+msgid "Nombre de Places"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__session_count
+msgid "Nombre de Sessions"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__notes
+msgid "Notes"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__message_needaction_counter
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__message_needaction_counter
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__message_needaction_counter
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__message_needaction_counter
+#: model:ir.model.fields,field_description:Training_center.field_training_center__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__children
+msgid "Number of Dependent Children"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__leaves_count
+msgid "Number of Time Off"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__message_has_error_counter
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__message_has_error_counter
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__message_has_error_counter
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__message_has_error_counter
+#: model:ir.model.fields,field_description:Training_center.field_training_center__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_academy_course__message_needaction_counter
+#: model:ir.model.fields,help:Training_center.field_academy_course_session__message_needaction_counter
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__message_needaction_counter
+#: model:ir.model.fields,help:Training_center.field_hr_etudiant__message_needaction_counter
+#: model:ir.model.fields,help:Training_center.field_training_center__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_academy_course__message_has_error_counter
+#: model:ir.model.fields,help:Training_center.field_academy_course_session__message_has_error_counter
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__message_has_error_counter
+#: model:ir.model.fields,help:Training_center.field_hr_etudiant__message_has_error_counter
+#: model:ir.model.fields,help:Training_center.field_training_center__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__related_contacts_count
+msgid "Number of related contacts"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__numero_de_facture
+msgid "Numéro de facture"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__learning_objectives
+msgid "Objectifs d'apprentissage"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__pin
+msgid "PIN"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__pin
+msgid ""
+"PIN used to Check In/Out in the Kiosk Mode of the Attendance application (if"
+" enabled in Configuration) and to change the cashier in the Point of Sale "
+"application."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__attendee_ids
+#: model_terms:ir.ui.view,arch_db:Training_center.views_cours_session_form
+msgid "Participants"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__user_partner_id
+msgid "Partner-related data of the user"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__passport_id
+msgid "Passport No"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.act_window,name:Training_center.act_employe_list
+msgid "Patients"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.ui.menu,name:Training_center.menu_hr_employee
+#: model:ir.ui.menu,name:Training_center.menu_hr_personnel
+msgid "Personnel"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_training_center__phone
+msgid "Phone"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+msgid "Photo"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__place_of_birth
+msgid "Place of Birth"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course_session__state__full
+msgid "Places Complètes"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__taken_seats
+msgid "Places Occupées"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+msgid "Post"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.ui.menu,name:Training_center.menu_hr_employee_postes
+msgid "Postes"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_etudiant_form
+msgid "Print Badge"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__private_email
+msgid "Private Email"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__phone
+msgid "Private Phone"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__prenom_etudiant
+msgid "Prénom"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course__course_format__in_person
+msgid "Présentielle"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.ui.menu,name:Training_center.menu_hr_employee_recretements
+msgid "Recrutement"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__reference
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__reference
+msgid "Reference"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_tree
+msgid "Reference enseignant"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_etudiant_tree
+msgid "Reference etudiant"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__related_contact_ids
+msgid "Related Contact"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__remaining_leaves
+msgid "Remaining Paid Time Off"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__resource_id
+msgid "Resource"
+msgstr ""
+
+#. module: Training_center
+#: model:res.groups,name:Training_center.group_respnsable_rh
+msgid "Responsable ressources humaines"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.dashboard_form_view_global
+msgid "Répartition des Formations : En Ligne vs Présentiel"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__sinid
+msgid "SIN No"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__message_has_sms_error
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__message_has_sms_error
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__message_has_sms_error
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__message_has_sms_error
+#: model:ir.model.fields,field_description:Training_center.field_training_center__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__ssnid
+msgid "SSN No"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_search
+msgid "Search Courses"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseigant_search
+msgid "Search Enseiganat"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_etudiant_search
+msgid "Search Etudiant"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_session_search
+msgid "Search Session"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__coach_id
+msgid ""
+"Select the \"Employee\" who is the coach of this employee.\n"
+"The \"Coach\" has no specific rights or responsibilities by default."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__leave_manager_id
+msgid ""
+"Select the user responsible for approving \"Time Off\" of this employee.\n"
+"If empty, the approval is done by an Administrator or Approver (determined in settings/users)."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__session_id
+msgid "Session Choisi"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model,name:Training_center.model_academy_course_session
+msgid "Session de Cours"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.ui.menu,name:Training_center.menu_hr_formation_session
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_form
+msgid "Sessions"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__session_ids
+msgid "Sessions Inscriptions"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.act_window,name:Training_center.action_view_academy_course_session_tree
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_session_tree
+msgid "Sessions de formation"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__available_session_ids
+msgid "Sessions disponibles"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.act_window,name:Training_center.act_session_by_course_graph
+#: model_terms:ir.ui.view,arch_db:Training_center.dashboard_form_view_global
+msgid "Sessions par Cours"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_sessions_by_course_graph
+msgid "Sessions par Formation"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__show_hr_icon_display
+msgid "Show Hr Icon Display"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_training_center__site
+msgid "Site Web"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__sinid
+msgid "Social Insurance Number"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__ssnid
+msgid "Social Security Number"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+msgid "Societe"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__spouse_birthdate
+msgid "Spouse Birthdate"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__spouse_complete_name
+msgid "Spouse Complete Name"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_academy_course_session_search
+msgid "State"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__state
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__state
+msgid "Status"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+msgid "Statut Familial"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_course_student_category_graph
+msgid "Student Distribution by Course Category"
+msgstr ""
+
+#. module: Training_center
+#. odoo-python
+#: code:addons/Training_center/controllers/main.py:0
+#, python-format
+msgid "Subject field is mandatory."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__subordinate_ids
+msgid "Subordinates"
+msgstr ""
+
+#. module: Training_center
+#. odoo-python
+#: code:addons/Training_center/controllers/main.py:0
+#, python-format
+msgid "Successfully registered teacher!"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__session_ids
+msgid "Séances"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.ui.menu,name:Training_center.menu_hr_centre
+msgid "Tableaux de bord"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.portal_breadcrumbs_teachers
+#: model_terms:ir.ui.view,arch_db:Training_center.teachers_list_view_portal
+msgid "Teachers"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.views_cours_session_form
+msgid "Terminer"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course__state__completed
+#: model:ir.model.fields.selection,name:Training_center.selection__academy_course_session__state__completed
+msgid "Terminé"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.constraint,message:Training_center.constraint_hr_etudiant_barcode_uniq
+msgid ""
+"The Badge ID must be unique, this one is already assigned to another "
+"employee."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__company_country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__is_address_home_a_company
+msgid "The employee address has a company linked"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__employee_type
+msgid ""
+"The employee type. Although the primary purpose may seem to categorize "
+"employees, this field has also an impact in the Contract History. Only "
+"Employee type is supposed to be under contract and will have a Contract "
+"History."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__tz
+msgid ""
+"This field is used in order to define in which timezone the resources will "
+"work."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__leave_manager_id
+msgid "Time Off"
+msgstr ""
+
+#. module: Training_center
+#. odoo-python
+#: code:addons/Training_center/models/Enseignant.py:0
+#, python-format
+msgid "Time Off Dashboard"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.portal_breadcrumbs_teachers
+#: model_terms:ir.ui.view,arch_db:Training_center.portal_my_teacher
+#: model_terms:ir.ui.view,arch_db:Training_center.teacher_time_off_dashboard
+msgid "Time Off Requests"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__tz
+msgid "Timezone"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__name
+msgid "Titre"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__name
+msgid "Titre de la Session"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__job_id
+msgid "Titre de poste"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__leave_date_to
+msgid "To Date"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__allocations_count
+msgid "Total number of allocations"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__allocation_count
+msgid "Total number of days allocated."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__remaining_leaves
+msgid ""
+"Total number of paid time off allocated to this employee, change this value "
+"to create allocation/time off request. Total based on all the time off types"
+" without overriding limit."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__total_etudiant
+msgid "Total Étudiants"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model,name:Training_center.model_training_center
+msgid "Training Center"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__telephone
+msgid "Téléphone"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model,name:Training_center.model_res_users
+msgid "User"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__user_partner_id
+msgid "User's partner"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__user_id
+msgid "Utilisateur"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__visa_expire
+msgid "Visa Expiration Date"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__visa_no
+msgid "Visa No"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__website_message_ids
+#: model:ir.model.fields,field_description:Training_center.field_academy_course_session__website_message_ids
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__website_message_ids
+#: model:ir.model.fields,field_description:Training_center.field_hr_etudiant__website_message_ids
+#: model:ir.model.fields,field_description:Training_center.field_training_center__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_academy_course__website_message_ids
+#: model:ir.model.fields,help:Training_center.field_academy_course_session__website_message_ids
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__website_message_ids
+#: model:ir.model.fields,help:Training_center.field_hr_etudiant__website_message_ids
+#: model:ir.model.fields,help:Training_center.field_training_center__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,help:Training_center.field_hr_enseignant__member_of_department
+msgid ""
+"Whether the employee is a member of the active user's department or one of "
+"it's child department."
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__address_id
+msgid "Work Address"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__work_contact_id
+msgid "Work Contact"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__work_email
+msgid "Work Email"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__work_location_id
+msgid "Work Location"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__mobile_phone
+msgid "Work Mobile"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__has_work_permit
+msgid "Work Permit"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__work_permit_expiration_date
+msgid "Work Permit Expiration Date"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__permit_no
+msgid "Work Permit No"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__work_permit_scheduled_activity
+msgid "Work Permit Scheduled Activity"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__work_phone
+msgid "Work Phone"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseigant_search
+msgid "department"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.teacher_profile_view_portal
+msgid "teacher_photo"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__work_permit_name
+msgid "work_permit_name"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.model.fields,field_description:Training_center.field_hr_enseignant__study_school
+msgid "École"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_enseignant_form
+msgid "Éducation et Urgence"
+msgstr ""
+
+#. module: Training_center
+#: model_terms:ir.ui.view,arch_db:Training_center.view_etudiant_tree
+#: model_terms:ir.ui.view,arch_db:Training_center.view_hr_etudiant_form
+#: model_terms:ir.ui.view,arch_db:Training_center.views_cours_session_form
+msgid "Étudiant"
+msgstr ""
+
+#. module: Training_center
+#: model:ir.actions.act_window,name:Training_center.action_etudiant_form
+#: model:ir.model.fields,field_description:Training_center.field_academy_course__student_ids
+msgid "Étudiants"
+msgstr ""

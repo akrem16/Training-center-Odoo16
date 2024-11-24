@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="category_hr_property" model="ir.module.category">
+        <field name="name">Centre de formation BHS</field>
+        <field name="description">Catégorie pour le Centre de formation</field>
+    </record>
+
+    <record id="group_respnsable_rh" model="res.groups">
+        <field name="name">Responsable ressources humaines</field>
+        <field name="category_id" ref="Training_center.category_hr_property"/>
+    </record>
+
+    <record id="group_comptable" model="res.groups">
+        <field name="name">Comptable</field>
+        <field name="category_id" ref="Training_center.category_hr_property"/>
+    </record>
+
+    <record id="group_hr_etudiant" model="res.groups">
+        <field name="name">Etudiant</field>
+        <field name="category_id" ref="Training_center.category_hr_property"/>
+    </record>
+
+
+    <record id="group_hr_enseignat" model="res.groups">
+        <field name="name">Enseignat</field>
+        <field name="category_id" ref="Training_center.category_hr_property"/>
+    </record>
+
+
+
+</odoo>
